@@ -1,6 +1,8 @@
 import type { MetadataRoute } from "next";
 import { apps, site } from "@/lib/site";
 
+export const dynamic = "force-static";
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const appPages = apps.map((app) => ({
     url: `${site.url}/apps/${app.slug}`,
