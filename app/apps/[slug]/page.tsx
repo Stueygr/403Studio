@@ -110,6 +110,25 @@ export default async function AppPage({ params }: Props) {
                 ))}
               </div>
 
+              {"games" in app && app.games && (
+                <div className="mb-10">
+                  <h2 className="text-xl font-bold mb-6 tracking-tight">Included Games</h2>
+                  <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                    {app.games.map((game) => (
+                      <div
+                        key={game}
+                        className="px-4 py-3 rounded-xl bg-white dark:bg-zinc-900 border border-zinc-200/60 dark:border-zinc-800/80 shadow-sm text-sm font-semibold text-center text-zinc-700 dark:text-zinc-300"
+                      >
+                        {game}
+                      </div>
+                    ))}
+                    <div className="px-4 py-3 rounded-xl bg-zinc-150/40 dark:bg-zinc-900/30 border border-dashed border-zinc-300 dark:border-zinc-800 text-sm font-medium text-center text-zinc-400 dark:text-zinc-550">
+                      + More to Come
+                    </div>
+                  </div>
+                </div>
+              )}
+
               <div className="rounded-2xl border border-zinc-200/85 dark:border-zinc-800 bg-zinc-100 dark:bg-zinc-900/50 p-6 md:p-8 flex flex-col sm:flex-row items-center justify-between gap-6">
                 <div className="flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left">
                   <AppStoreBadge />
