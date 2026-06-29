@@ -7,6 +7,7 @@ import { SiteNav } from "@/components/SiteNav";
 import { apps, site } from "@/lib/site";
 
 import { AppStoreBadge } from "@/components/AppStoreBadge";
+import { ScreenshotGallery } from "@/components/ScreenshotGallery";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -154,16 +155,20 @@ export default async function AppPage({ params }: Props) {
 
               {/* Mockup Showcase Bezel */}
               <div className="relative rounded-3xl overflow-hidden border border-zinc-200/50 dark:border-zinc-800 bg-zinc-100/50 dark:bg-zinc-900/50 backdrop-blur-md p-3 shadow-2xl">
-                <div className="relative aspect-square w-full rounded-2xl overflow-hidden border border-zinc-200/60 dark:border-zinc-800 bg-zinc-950">
-                  <Image
-                    src={app.mockup}
-                    alt={`${app.name} High-Fidelity UI Interface Screenshot`}
-                    fill
-                    priority
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 40vw, 30vw"
-                    className="object-cover object-top select-none group-hover:scale-102 transition-transform duration-700"
-                  />
-                </div>
+                {"screenshots" in app && app.screenshots ? (
+                  <ScreenshotGallery screenshots={app.screenshots} />
+                ) : (
+                  <div className="relative aspect-square w-full rounded-2xl overflow-hidden border border-zinc-200/60 dark:border-zinc-800 bg-zinc-950">
+                    <Image
+                      src={app.mockup}
+                      alt={`${app.name} High-Fidelity UI Interface Screenshot`}
+                      fill
+                      priority
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 40vw, 30vw"
+                      className="object-cover object-top select-none group-hover:scale-102 transition-transform duration-700"
+                    />
+                  </div>
+                )}
               </div>
             </div>
           </div>

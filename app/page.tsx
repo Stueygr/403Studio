@@ -200,19 +200,19 @@ export default function Home() {
           <ScrollReveal>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 text-zinc-900 dark:text-white border-t border-zinc-200 dark:border-zinc-800 pt-12">
               <div className="flex flex-col items-center">
-                <h4 className="text-xl md:text-2xl font-bold tracking-tight mb-2">Made in Canada</h4>
+                <h4 className="text-xl md:text-2xl font-bold tracking-tight mb-2 whitespace-nowrap">Made in Canada</h4>
                 <p className="text-sm text-zinc-500 font-medium max-w-[200px] leading-relaxed">Designed and developed in Alberta</p>
               </div>
               <div className="flex flex-col items-center">
-                <h4 className="text-xl md:text-2xl font-bold tracking-tight mb-2">Built to Play</h4>
+                <h4 className="text-xl md:text-2xl font-bold tracking-tight mb-2 whitespace-nowrap">Built to Play</h4>
                 <p className="text-sm text-zinc-500 font-medium max-w-[200px] leading-relaxed">Regular updates and long-term support</p>
               </div>
               <div className="flex flex-col items-center">
-                <h4 className="text-xl md:text-2xl font-bold tracking-tight mb-2">Native</h4>
-                <p className="text-sm text-zinc-500 font-medium max-w-[200px] leading-relaxed">Performance, built with Swift</p>
+                <h4 className="text-xl md:text-2xl font-bold tracking-tight mb-2 whitespace-nowrap">Native Performance</h4>
+                <p className="text-sm text-zinc-500 font-medium max-w-[200px] leading-relaxed">Built for iPhone</p>
               </div>
               <div className="flex flex-col items-center">
-                <h4 className="text-xl md:text-2xl font-bold tracking-tight mb-2">Always Improving</h4>
+                <h4 className="text-xl md:text-2xl font-bold tracking-tight mb-2 whitespace-nowrap">Always Improving</h4>
                 <p className="text-sm text-zinc-500 font-medium max-w-[200px] leading-relaxed">New features, refinements, and new apps in development</p>
               </div>
             </div>
