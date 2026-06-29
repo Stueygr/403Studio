@@ -18,10 +18,12 @@ export const apps = [
     icon: "/icon_pilot.png",
     mockup: "/pilot_logbook_ui.png",
     features: [
-      "Offline flight logging and duty tracking",
-      "CARs compliance built in",
-      "Native iPhone application",
-      "Secure iCloud synchronization support",
+      "Offline Flight & Duty Logging: Track block, air, and duty times on the go",
+      "CARs 700.15 & 700.16 Compliance: Built-in limit monitoring and rest period tracking",
+      "Automatic Night calculations: Instant flight time distribution based on solar coordinates",
+      "Export Logs: Export logs to PDF and CSV formats ready for audits",
+      "Secure iCloud Sync: Sync seamlessly across your iOS devices using Apple ID",
+      "100% Offline Capable: Designed for flight decks with zero cellular dependency",
     ],
   },
   {
