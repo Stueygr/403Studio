@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteNav } from "@/components/SiteNav";
@@ -23,7 +24,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!app) return { title: "App Not Found" };
 
   return {
-    title: app.name,
+    title: `${app.name} — ${app.tagline}`,
     description: app.description,
   };
 }
@@ -38,61 +39,106 @@ export default async function AppPage({ params }: Props) {
       gradient: "from-blue-500/20 to-indigo-500/20",
       text: "text-blue-500",
       dot: "bg-blue-500",
+      border: "border-blue-500/20",
     },
     purple: {
       gradient: "from-purple-500/20 to-pink-500/20",
       text: "text-purple-500",
       dot: "bg-purple-500",
+      border: "border-purple-500/20",
+    },
+    pink: {
+      gradient: "from-pink-500/20 to-rose-500/20",
+      text: "text-pink-500",
+      dot: "bg-pink-500",
+      border: "border-pink-500/20",
     },
   }[app.color];
 
+  // Map slug to corresponding UI mockup
+  const mockupSrc = {
+    "pilot-logbook": "/pilot_logbook_ui.png",
+    "game-vault": "/game_vault_ui.png",
+    "vegas-cyberpunk-midnight": "/vegas_cyberpunk_midnight_ui.png",
+  }[app.slug] || "/studio_hero.png";
+
   return (
-    <div className="min-h-screen bg-zinc-50 dark:bg-zinc-950 text-zinc-900 dark:text-zinc-50">
+    <div className="min-h-screen bg-zinc-50 dark:bg-zinc-950 text-zinc-900 dark:text-zinc-50 selection:bg-blue-500/30">
       <SiteNav />
 
-      <main className="pt-32 pb-20 px-6">
-        <div className="max-w-4xl mx-auto">
+      <main className="pt-32 pb-24 px-6">
+        <div className="max-w-6xl mx-auto">
           <Link
             href="/#apps"
-            className="text-sm font-medium text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-300 mb-8 inline-block"
+            className="text-sm font-medium text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-355 mb-8 inline-flex items-center gap-2 group transition-colors"
           >
-            &larr; All apps
+            <span className="group-hover:-translate-x-0.5 transition-transform">&larr;</span> All apps
           </Link>
 
-          <div className={`rounded-3xl bg-gradient-to-br ${accent.gradient} p-px mb-12`}>
-            <div className="rounded-3xl bg-white dark:bg-zinc-900 p-10 md:p-14">
-              <p className={`text-sm font-semibold uppercase tracking-wider mb-4 ${accent.text}`}>
-                {site.name}
-              </p>
-              <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-4">{app.name}</h1>
-              <p className="text-xl text-zinc-600 dark:text-zinc-400 mb-8">{app.tagline}</p>
-              <p className="text-lg text-zinc-600 dark:text-zinc-400 leading-relaxed">{app.description}</p>
+          <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+            {/* Left Column: Details & Features */}
+            <div className="lg:col-span-7 flex flex-col">
+              <div className="mb-10">
+                <p className={`text-xs font-bold uppercase tracking-widest mb-3 ${accent.text}`}>
+                  {site.name}
+                </p>
+                <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-4">{app.name}</h1>
+                <p className="text-xl font-medium text-zinc-650 dark:text-zinc-300 mb-6">{app.tagline}</p>
+                <p className="text-base text-zinc-600 dark:text-zinc-400 leading-relaxed">{app.description}</p>
+              </div>
+
+              <h2 className="text-xl font-bold mb-6 tracking-tight">Key Capabilities</h2>
+              <div className="grid sm:grid-cols-2 gap-4 mb-10">
+                {app.features.map((feature) => (
+                  <div
+                    key={feature}
+                    className="flex items-start gap-3 p-4 rounded-2xl bg-white dark:bg-zinc-900 border border-zinc-200/60 dark:border-zinc-800/80 shadow-sm"
+                  >
+                    <span className={`mt-1.5 w-2 h-2 rounded-full shrink-0 ${accent.dot}`} />
+                    <span className="text-sm text-zinc-650 dark:text-zinc-350 leading-relaxed font-medium">
+                      {feature}
+                    </span>
+                  </div>
+                ))}
+              </div>
+
+              <div className="rounded-2xl border border-zinc-200/80 dark:border-zinc-800 bg-zinc-100 dark:bg-zinc-900/50 p-6 md:p-8 text-center sm:text-left flex flex-col sm:flex-row items-center justify-between gap-6">
+                <div className="max-w-md">
+                  <p className="text-sm font-semibold mb-1">Stay Updated</p>
+                  <p className="text-xs text-zinc-500 dark:text-zinc-450 leading-relaxed">
+                    Available soon on the Apple App Store for iPhone, iPad, and Mac.
+                  </p>
+                </div>
+                <a
+                  href={`mailto:${site.email}?subject=${encodeURIComponent(`${app.name} — notify me`)}`}
+                  className="whitespace-nowrap px-6 py-2.5 rounded-full bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 text-sm font-medium hover:scale-105 transition-transform shadow-md hover:shadow-lg"
+                >
+                  Notify me
+                </a>
+              </div>
             </div>
-          </div>
 
-          <h2 className="text-2xl font-bold mb-6">What you get</h2>
-          <ul className="space-y-4 mb-12">
-            {app.features.map((feature) => (
-              <li
-                key={feature}
-                className="flex items-start gap-3 text-zinc-600 dark:text-zinc-400"
-              >
-                <span className={`mt-1.5 w-2 h-2 rounded-full shrink-0 ${accent.dot}`} />
-                {feature}
-              </li>
-            ))}
-          </ul>
+            {/* Right Column: Premium Mockup Graphic */}
+            <div className="lg:col-span-5 relative group lg:sticky lg:top-28">
+              {/* Backdrop Glow */}
+              <div
+                className={`absolute -inset-4 rounded-3xl bg-gradient-to-tr ${accent.gradient} opacity-30 blur-2xl group-hover:opacity-45 transition-opacity duration-1000 -z-10`}
+              />
 
-          <div className="rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-zinc-100 dark:bg-zinc-900/50 p-8 text-center">
-            <p className="text-zinc-600 dark:text-zinc-400 mb-6">
-              Available soon on the App Store for iPhone, iPad, and Mac.
-            </p>
-            <a
-              href={`mailto:${site.email}?subject=${encodeURIComponent(`${app.name} — notify me`)}`}
-              className="inline-block px-8 py-3 rounded-full bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 font-medium hover:scale-105 transition-transform"
-            >
-              Request launch notification
-            </a>
+              {/* Mockup Showcase Bezel */}
+              <div className="relative rounded-3xl overflow-hidden border border-zinc-200/50 dark:border-zinc-800 bg-zinc-100/50 dark:bg-zinc-900/50 backdrop-blur-md p-3 shadow-2xl">
+                <div className="relative aspect-square w-full rounded-2xl overflow-hidden border border-zinc-200/60 dark:border-zinc-800 bg-zinc-950">
+                  <Image
+                    src={mockupSrc}
+                    alt={`${app.name} High-Fidelity UI Interface Screenshot`}
+                    fill
+                    priority
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 40vw, 30vw"
+                    className="object-cover object-top select-none group-hover:scale-102 transition-transform duration-700"
+                  />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </main>

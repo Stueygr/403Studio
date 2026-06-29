@@ -24,7 +24,7 @@ export const apps = [
   },
   {
     slug: "game-vault",
-    name: "Game Vault",
+    name: "Game Vault - No wifi Games",
     tagline: "Your campaigns, kept local.",
     description:
       "The ultimate companion for your deepest campaigns. Whether you are strategizing your next Honor Mode build, resolving complex questlines, or managing competitive rosters, your data remains secure and locally accessible.",
@@ -34,6 +34,20 @@ export const apps = [
       "Quest and build tracking",
       "Fully offline and private",
       "Sync-free by design",
+    ],
+  },
+  {
+    slug: "vegas-cyberpunk-midnight",
+    name: "Vegas Cyberpunk Midnight",
+    tagline: "Jack in. Stay local.",
+    description:
+      "An offline-first character sheet, cyberware planner, and campaign tracker built for cyberpunk tabletop roleplaying. Keep your gear sheets, street cred, and runners' stats secure on your device, far away from corporate cloud tracking.",
+    color: "pink" as const,
+    features: [
+      "Cyberware implant grid and planner",
+      "Offline character sheets and stats tracker",
+      "Hacking deck and credit ledger",
+      "Zero corporate cloud tracking or net access",
     ],
   },
 ] as const;
