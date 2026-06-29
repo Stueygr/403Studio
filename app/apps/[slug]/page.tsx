@@ -55,12 +55,7 @@ export default async function AppPage({ params }: Props) {
     },
   }[app.color];
 
-  // Map slug to corresponding UI mockup
-  const mockupSrc = {
-    "pilot-logbook": "/pilot_logbook_ui.png",
-    "game-vault": "/game_vault_ui.png",
-    "vegas-cyberpunk-midnight": "/vegas_cyberpunk_midnight_ui.png",
-  }[app.slug] || "/studio_hero.png";
+
 
   return (
     <div className="min-h-screen bg-zinc-50 dark:bg-zinc-950 text-zinc-900 dark:text-zinc-50 selection:bg-blue-500/30">
@@ -82,7 +77,18 @@ export default async function AppPage({ params }: Props) {
                 <p className={`text-xs font-bold uppercase tracking-widest mb-3 ${accent.text}`}>
                   {site.name}
                 </p>
-                <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-4">{app.name}</h1>
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="w-14 h-14 rounded-xl overflow-hidden border border-zinc-200/60 dark:border-zinc-800 shadow-sm shrink-0">
+                    <Image
+                      src={app.icon}
+                      alt={`${app.name} app icon`}
+                      width={56}
+                      height={56}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <h1 className="text-4xl md:text-5xl font-bold tracking-tight">{app.name}</h1>
+                </div>
                 <p className="text-xl font-medium text-zinc-650 dark:text-zinc-300 mb-6">{app.tagline}</p>
                 <p className="text-base text-zinc-600 dark:text-zinc-400 leading-relaxed">{app.description}</p>
               </div>
@@ -129,7 +135,7 @@ export default async function AppPage({ params }: Props) {
               <div className="relative rounded-3xl overflow-hidden border border-zinc-200/50 dark:border-zinc-800 bg-zinc-100/50 dark:bg-zinc-900/50 backdrop-blur-md p-3 shadow-2xl">
                 <div className="relative aspect-square w-full rounded-2xl overflow-hidden border border-zinc-200/60 dark:border-zinc-800 bg-zinc-950">
                   <Image
-                    src={mockupSrc}
+                    src={app.mockup}
                     alt={`${app.name} High-Fidelity UI Interface Screenshot`}
                     fill
                     priority

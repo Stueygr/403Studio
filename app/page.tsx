@@ -8,14 +8,17 @@ const colorStyles = {
   blue: {
     icon: "bg-blue-500/10 text-blue-500 border-blue-500/20",
     link: "text-blue-500 hover:text-blue-600 dark:hover:text-blue-400",
+    glow: "group-hover:shadow-blue-500/10",
   },
   purple: {
     icon: "bg-purple-500/10 text-purple-500 border-purple-500/20",
     link: "text-purple-500 hover:text-purple-600 dark:hover:text-purple-400",
+    glow: "group-hover:shadow-purple-500/10",
   },
   pink: {
     icon: "bg-pink-500/10 text-pink-500 border-pink-500/20",
     link: "text-pink-500 hover:text-pink-600 dark:hover:text-pink-400",
+    glow: "group-hover:shadow-pink-500/10",
   },
 } as const;
 
@@ -24,14 +27,16 @@ export default function Home() {
     <div className="min-h-screen bg-zinc-50 dark:bg-zinc-950 text-zinc-900 dark:text-zinc-50 selection:bg-blue-500/30">
       <SiteNav />
 
+      {/* ── Hero ── */}
       <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden px-6 pt-24 pb-16">
         <div className="absolute inset-0 w-full h-full bg-gradient-to-br from-indigo-500/20 via-purple-500/20 to-blue-500/20 animate-pulse blur-3xl opacity-50 -z-10" />
 
         <div className="max-w-5xl mx-auto text-center flex flex-col items-center">
           <h1 className="text-5xl md:text-7xl font-bold tracking-tighter mb-6">
-            Software, <br className="md:hidden" />
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-zinc-900 to-zinc-500 dark:from-white dark:to-zinc-500">
-              Beautifully Local.
+            Your Data. Your Device.
+            <br />
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
+              No Exceptions.
             </span>
           </h1>
           <p className="text-lg md:text-xl text-zinc-600 dark:text-zinc-400 mb-10 max-w-2xl mx-auto leading-relaxed">
@@ -52,21 +57,22 @@ export default function Home() {
             </Link>
           </div>
 
-          {/* Premium brand hero mockup */}
-          <div className="relative w-full max-w-4xl rounded-3xl overflow-hidden border border-zinc-200/40 dark:border-zinc-850 bg-white/5 dark:bg-zinc-900/5 backdrop-blur-md shadow-2xl dark:shadow-indigo-500/5 transition-all duration-700 hover:shadow-indigo-500/10">
+          {/* Device composite hero */}
+          <div className="relative w-full max-w-4xl">
+            <div className="absolute -inset-8 bg-gradient-to-br from-indigo-500/10 via-purple-500/10 to-pink-500/10 rounded-full blur-3xl -z-10 opacity-60" />
             <Image
-              src="/studio_hero.png"
-              alt="403 Studio Local-First Architecture"
+              src="/hero_devices.png"
+              alt="403 Studio apps running on iPhone, iPad, and Mac"
               width={1200}
               height={700}
               priority
-              className="w-full object-cover select-none scale-100 transition-transform duration-700"
+              className="w-full object-contain select-none"
             />
-            <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-zinc-50 via-zinc-50/50 to-transparent dark:from-zinc-950 dark:via-zinc-950/50 pointer-events-none" />
           </div>
         </div>
       </section>
 
+      {/* ── Apps ── */}
       <section id="apps" className="py-32 px-6 max-w-7xl mx-auto">
         <div className="text-center mb-20">
           <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-4">Crafted for focus.</h2>
@@ -78,37 +84,36 @@ export default function Home() {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
           {apps.map((app) => {
             const styles = colorStyles[app.color];
-            
-            // Map slug to corresponding UI mockup
-            const mockupSrc = {
-              "pilot-logbook": "/pilot_logbook_ui.png",
-              "game-vault": "/game_vault_ui.png",
-              "vegas-cyberpunk-midnight": "/vegas_cyberpunk_midnight_ui.png",
-            }[app.slug] || "/studio_hero.png";
 
             return (
               <div
                 key={app.slug}
-                className="group relative rounded-3xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800/80 p-6 md:p-8 flex flex-col justify-between overflow-hidden shadow-sm hover:shadow-2xl hover:border-zinc-350 dark:hover:border-zinc-700 transition-all duration-500 hover:-translate-y-1"
+                className={`group relative rounded-3xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800/80 p-6 md:p-8 flex flex-col justify-between overflow-hidden shadow-sm hover:shadow-2xl ${styles.glow} hover:border-zinc-300 dark:hover:border-zinc-700 transition-all duration-500 hover:-translate-y-1`}
               >
                 <div className="relative z-10 flex flex-col h-full">
-                  <div
-                    className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-6 border ${styles.icon}`}
-                  >
-                    <span className="text-xl font-bold">{app.name.charAt(0)}</span>
+                  {/* App Icon */}
+                  <div className="w-16 h-16 rounded-2xl overflow-hidden mb-6 border border-zinc-200/60 dark:border-zinc-800 shadow-sm">
+                    <Image
+                      src={app.icon}
+                      alt={`${app.name} app icon`}
+                      width={64}
+                      height={64}
+                      className="w-full h-full object-cover"
+                    />
                   </div>
+
                   <h3 className="text-xl font-bold mb-2 group-hover:text-zinc-900 dark:group-hover:text-white transition-colors">
                     {app.name}
                   </h3>
                   <p className="text-zinc-600 dark:text-zinc-400 text-sm leading-relaxed mb-6 flex-grow">
                     {app.description}
                   </p>
-                  
-                  {/* Miniature App Preview Image */}
-                  <div className="relative w-full h-44 rounded-xl overflow-hidden mb-6 border border-zinc-150 dark:border-zinc-800 bg-zinc-100 dark:bg-zinc-950">
+
+                  {/* App Preview */}
+                  <div className="relative w-full h-44 rounded-xl overflow-hidden mb-6 border border-zinc-200/60 dark:border-zinc-800 bg-zinc-100 dark:bg-zinc-950">
                     <Image
-                      src={mockupSrc}
-                      alt={`${app.name} Interface Dashboard Mockup`}
+                      src={app.mockup}
+                      alt={`${app.name} interface preview`}
                       fill
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       className="object-cover object-top select-none group-hover:scale-105 transition-transform duration-700"
@@ -129,9 +134,48 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ── Philosophy ── */}
+      <section className="py-24 px-6 border-t border-zinc-200 dark:border-zinc-800">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-center mb-16">
+            Why we build differently.
+          </h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="text-center md:text-left p-6 rounded-2xl bg-white dark:bg-zinc-900 border border-zinc-200/60 dark:border-zinc-800">
+              <div className="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-500 border border-emerald-500/20 flex items-center justify-center mb-4 mx-auto md:mx-0">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+              </div>
+              <h3 className="text-lg font-bold mb-2">Privacy First</h3>
+              <p className="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">
+                Your data never leaves your device. No telemetry, no analytics, no tracking — ever.
+              </p>
+            </div>
+            <div className="text-center md:text-left p-6 rounded-2xl bg-white dark:bg-zinc-900 border border-zinc-200/60 dark:border-zinc-800">
+              <div className="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-500 border border-amber-500/20 flex items-center justify-center mb-4 mx-auto md:mx-0">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+              </div>
+              <h3 className="text-lg font-bold mb-2">Native Speed</h3>
+              <p className="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">
+                Built with Swift and SwiftUI for instant, fluid performance that web wrappers can never match.
+              </p>
+            </div>
+            <div className="text-center md:text-left p-6 rounded-2xl bg-white dark:bg-zinc-900 border border-zinc-200/60 dark:border-zinc-800">
+              <div className="w-12 h-12 rounded-xl bg-sky-500/10 text-sky-500 border border-sky-500/20 flex items-center justify-center mb-4 mx-auto md:mx-0">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m2 8 2 2-2 2 2 2-2 2"/><path d="m22 8-2 2 2 2-2 2 2 2"/><line x1="9" x2="15" y1="12" y2="12"/></svg>
+              </div>
+              <h3 className="text-lg font-bold mb-2">Offline Always</h3>
+              <p className="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">
+                Full functionality without Wi-Fi, cellular, or internet of any kind. Your apps just work.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── About ── */}
       <section
         id="about"
-        className="py-32 px-6 border-t border-zinc-200 dark:border-zinc-800 bg-zinc-100 dark:bg-zinc-900/50"
+        className="py-32 px-6 bg-zinc-100 dark:bg-zinc-900/50"
       >
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-8">Built for the Apple Ecosystem.</h2>
@@ -161,6 +205,30 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ── Platform badges ── */}
+      <section className="py-16 px-6 border-t border-zinc-200 dark:border-zinc-800">
+        <div className="max-w-3xl mx-auto text-center">
+          <p className="text-xs font-bold uppercase tracking-widest text-zinc-400 dark:text-zinc-600 mb-6">
+            Coming soon to
+          </p>
+          <div className="flex items-center justify-center gap-8 text-zinc-400 dark:text-zinc-600">
+            <div className="flex flex-col items-center gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><rect width="7" height="12" x="8.5" y="2" rx="1"/><path d="M11 22h2"/><path d="M12 17v5"/></svg>
+              <span className="text-xs font-medium">iPhone</span>
+            </div>
+            <div className="flex flex-col items-center gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><rect width="16" height="20" x="4" y="2" rx="2"/><line x1="12" x2="12.01" y1="18" y2="18"/></svg>
+              <span className="text-xs font-medium">iPad</span>
+            </div>
+            <div className="flex flex-col items-center gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="14" x="2" y="3" rx="2"/><line x1="8" x2="16" y1="21" y2="21"/><line x1="12" x2="12" y1="17" y2="21"/></svg>
+              <span className="text-xs font-medium">Mac</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Contact ── */}
       <section id="contact" className="py-32 px-6 max-w-3xl mx-auto text-center">
         <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-6">Get in touch</h2>
         <p className="text-lg text-zinc-600 dark:text-zinc-400 leading-relaxed mb-10">
