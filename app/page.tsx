@@ -3,6 +3,7 @@ import Image from "next/image";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteNav } from "@/components/SiteNav";
 import { ScrollReveal } from "@/components/ScrollReveal";
+import { BackToTop } from "@/components/BackToTop";
 import { apps, site } from "@/lib/site";
 
 const colorStyles = {
@@ -67,7 +68,7 @@ export default function Home() {
               width={1200}
               height={700}
               priority
-              className="w-full object-contain select-none"
+              className="w-full object-contain select-none [mask-image:linear-gradient(to_bottom,black_75%,transparent_100%)]"
             />
           </div>
         </div>
@@ -344,6 +345,7 @@ export default function Home() {
         </ScrollReveal>
       </section>
 
+      <BackToTop />
       <SiteFooter />
     </div>
   );
