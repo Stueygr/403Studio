@@ -34,10 +34,10 @@ export default function Home() {
 
         <div className="max-w-5xl mx-auto text-center flex flex-col items-center">
           <h1 className="text-5xl md:text-7xl font-bold tracking-tighter mb-6">
-            Your Data. Your Device.
+            Quality Apps.
             <br />
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
-              No Exceptions.
+              Offline & Locally Made.
             </span>
           </h1>
           <p className="text-lg md:text-xl text-zinc-600 dark:text-zinc-400 mb-10 max-w-2xl mx-auto leading-relaxed">

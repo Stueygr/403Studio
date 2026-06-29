@@ -1,6 +1,6 @@
 export const site = {
   name: "403 Studio",
-  tagline: "Your Data. Your Device. No Exceptions.",
+  tagline: "Quality Apps, Offline & Locally Made.",
   description:
     "Fast, private apps for iPhone, iPad, and Mac — no accounts, no subscriptions, no cloud required.",
   url: "https://www.403studio.ca",
