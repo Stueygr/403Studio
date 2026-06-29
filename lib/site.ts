@@ -65,15 +65,23 @@ export const apps = [
     name: "Vegas Cyberpunk Midnight",
     tagline: "The strip, in your pocket.",
     description:
-      "A neon-drenched casino simulator packed with the classics — poker, blackjack, slots, roulette, and more. Built entirely for offline enjoyment with zero real money. Just pure Vegas vibes wherever you are.",
+      "A neon-drenched casino simulator packed with the classics — blackjack, roulette, plinko, slots, video poker, and baccarat. Built entirely for offline enjoyment with zero real money. Currently in active development.",
     color: "pink" as const,
     icon: "/icon_cyberpunk.png",
     mockup: "/vegas_cyberpunk_midnight_ui.png",
     features: [
-      "Poker, blackjack, slots, roulette & more",
+      "Blackjack, roulette, slots & more",
       "Fully offline casino experience",
       "No real money or gambling risk",
       "Cyberpunk-styled neon aesthetics for iPhone",
+    ],
+    games: [
+      "Roulette",
+      "Blackjack",
+      "Plinko",
+      "Slots",
+      "Video Poker",
+      "Baccarat"
     ],
   },
 ] as const;
