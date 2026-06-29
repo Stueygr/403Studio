@@ -221,6 +221,67 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ── FAQ ── */}
+      <section id="faq" className="py-24 px-6 border-t border-zinc-200 dark:border-zinc-800">
+        <div className="max-w-4xl mx-auto">
+          <ScrollReveal>
+            <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-center mb-16">
+              Frequently Asked Questions
+            </h2>
+          </ScrollReveal>
+
+          <div className="space-y-4">
+            <ScrollReveal delay={1}>
+              <details className="group rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 p-6 [&_summary::-webkit-details-marker]:hidden">
+                <summary className="flex items-center justify-between cursor-pointer focus:outline-none">
+                  <h3 className="text-lg font-bold text-zinc-900 dark:text-zinc-50">
+                    How is my data stored and synced?
+                  </h3>
+                  <span className="ml-1.5 shrink-0 rounded-full bg-zinc-100 dark:bg-zinc-800 p-1.5 text-zinc-900 dark:text-zinc-50 transition duration-300 group-open:-rotate-180">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" /></svg>
+                  </span>
+                </summary>
+                <p className="mt-4 text-sm leading-relaxed text-zinc-650 dark:text-zinc-400">
+                  Your data resides directly on your device. Any synchronization between your devices is handled securely via Apple iCloud using your personal Apple ID login. Your logs and game records are not available to anyone but you or Apple—we run zero third-party databases, ensuring complete privacy.
+                </p>
+              </details>
+            </ScrollReveal>
+
+            <ScrollReveal delay={2}>
+              <details className="group rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 p-6 [&_summary::-webkit-details-marker]:hidden">
+                <summary className="flex items-center justify-between cursor-pointer focus:outline-none">
+                  <h3 className="text-lg font-bold text-zinc-900 dark:text-zinc-50">
+                    How much will the apps cost?
+                  </h3>
+                  <span className="ml-1.5 shrink-0 rounded-full bg-zinc-100 dark:bg-zinc-800 p-1.5 text-zinc-900 dark:text-zinc-50 transition duration-300 group-open:-rotate-180">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" /></svg>
+                  </span>
+                </summary>
+                <p className="mt-4 text-sm leading-relaxed text-zinc-650 dark:text-zinc-400">
+                  We are focusing on premium visual polish first. While we are still finalizing our pricing model, we plan to support continued development through a combination of ad-supported versions or optional premium upgrades.
+                </p>
+              </details>
+            </ScrollReveal>
+
+            <ScrollReveal delay={3}>
+              <details className="group rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 p-6 [&_summary::-webkit-details-marker]:hidden">
+                <summary className="flex items-center justify-between cursor-pointer focus:outline-none">
+                  <h3 className="text-lg font-bold text-zinc-900 dark:text-zinc-50">
+                    Which platforms are supported?
+                  </h3>
+                  <span className="ml-1.5 shrink-0 rounded-full bg-zinc-100 dark:bg-zinc-800 p-1.5 text-zinc-900 dark:text-zinc-50 transition duration-300 group-open:-rotate-180">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" /></svg>
+                  </span>
+                </summary>
+                <p className="mt-4 text-sm leading-relaxed text-zinc-650 dark:text-zinc-400">
+                  Our apps are designed natively and built exclusively for iPhone. Building natively allows us to make interfaces that load instantly, feel incredibly fluid, and run reliably offline.
+                </p>
+              </details>
+            </ScrollReveal>
+          </div>
+        </div>
+      </section>
+
       {/* ── Platform badges ── */}
       <section className="py-16 px-6 border-t border-zinc-200 dark:border-zinc-800">
         <ScrollReveal>
@@ -228,18 +289,10 @@ export default function Home() {
             <p className="text-xs font-bold uppercase tracking-widest text-zinc-400 dark:text-zinc-600 mb-6">
               Coming soon to
             </p>
-            <div className="flex items-center justify-center gap-8 text-zinc-400 dark:text-zinc-600">
+            <div className="flex items-center justify-center text-zinc-450 dark:text-zinc-550">
               <div className="flex flex-col items-center gap-2">
-                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><rect width="7" height="12" x="8.5" y="2" rx="1"/><path d="M11 22h2"/><path d="M12 17v5"/></svg>
-                <span className="text-xs font-medium">iPhone</span>
-              </div>
-              <div className="flex flex-col items-center gap-2">
-                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><rect width="16" height="20" x="4" y="2" rx="2"/><line x1="12" x2="12.01" y1="18" y2="18"/></svg>
-                <span className="text-xs font-medium">iPad</span>
-              </div>
-              <div className="flex flex-col items-center gap-2">
-                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="14" x="2" y="3" rx="2"/><line x1="8" x2="16" y1="21" y2="21"/><line x1="12" x2="12" y1="17" y2="21"/></svg>
-                <span className="text-xs font-medium">Mac</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-zinc-650 dark:text-zinc-350"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></svg>
+                <span className="text-sm font-semibold text-zinc-700 dark:text-zinc-300">iPhone</span>
               </div>
             </div>
           </div>

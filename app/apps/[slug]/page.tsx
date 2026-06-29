@@ -6,6 +6,8 @@ import { SiteFooter } from "@/components/SiteFooter";
 import { SiteNav } from "@/components/SiteNav";
 import { apps, site } from "@/lib/site";
 
+import { AppStoreBadge } from "@/components/AppStoreBadge";
+
 type Props = {
   params: Promise<{ slug: string }>;
 };
@@ -108,11 +110,11 @@ export default async function AppPage({ params }: Props) {
                 ))}
               </div>
 
-              <div className="rounded-2xl border border-zinc-200/80 dark:border-zinc-800 bg-zinc-100 dark:bg-zinc-900/50 p-6 md:p-8 text-center sm:text-left flex flex-col sm:flex-row items-center justify-between gap-6">
-                <div className="max-w-md">
-                  <p className="text-sm font-semibold mb-1">Stay Updated</p>
-                  <p className="text-xs text-zinc-500 dark:text-zinc-450 leading-relaxed">
-                    Available soon on the Apple App Store for iPhone, iPad, and Mac.
+              <div className="rounded-2xl border border-zinc-200/85 dark:border-zinc-800 bg-zinc-100 dark:bg-zinc-900/50 p-6 md:p-8 flex flex-col sm:flex-row items-center justify-between gap-6">
+                <div className="flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left">
+                  <AppStoreBadge />
+                  <p className="text-xs text-zinc-500 dark:text-zinc-450 leading-relaxed max-w-xs">
+                    Exclusively for iPhone. Securely synchronized via your own personal iCloud.
                   </p>
                 </div>
                 <a

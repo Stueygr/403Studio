@@ -2,7 +2,7 @@ export const site = {
   name: "403 Studio",
   tagline: "Quality Apps, Offline & Locally Made.",
   description:
-    "Fast, private apps for iPhone, iPad, and Mac — no accounts, no subscriptions, no cloud required.",
+    "Fast, private apps for iPhone — no third-party accounts, securely synced via your own iCloud.",
   url: "https://www.403studio.ca",
   email: "hello@403studio.ca",
 } as const;
@@ -20,8 +20,8 @@ export const apps = [
     features: [
       "Offline flight logging and duty tracking",
       "CARs compliance built in",
-      "Native iPhone, iPad, and Mac apps",
-      "No accounts or cloud sync required",
+      "Native iPhone application",
+      "Secure iCloud synchronization support",
     ],
   },
   {
@@ -29,15 +29,15 @@ export const apps = [
     name: "Game Vault - No wifi Games",
     tagline: "All the games you know and love — no Wi-Fi needed.",
     description:
-      "Chess, checkers, tic-tac-toe, sudoku, and so many more classic games, all built for offline play. Perfect for long flights, subway commutes, or anywhere you lose signal. No ads, no accounts, just the timeless games you grew up with.",
+      "Chess, checkers, tic-tac-toe, sudoku, and so many more classic games, all built for offline play. Perfect for long flights, subway commutes, or anywhere you lose signal. Just the timeless games you grew up with.",
     color: "purple" as const,
     icon: "/icon_gamevault.png",
     mockup: "/game_vault_ui.png",
     features: [
       "Chess, checkers, tic-tac-toe, sudoku & more",
       "Works offline — perfect for flights & commutes",
-      "No ads, no accounts, no in-app purchases",
-      "Clean, beautiful interfaces for every game",
+      "Secure iCloud synchronization support",
+      "Clean, beautiful interface designed for iPhone",
     ],
   },
   {
@@ -45,15 +45,15 @@ export const apps = [
     name: "Vegas Cyberpunk Midnight",
     tagline: "The strip, in your pocket.",
     description:
-      "A neon-drenched casino simulator packed with the classics — poker, blackjack, slots, roulette, and more. Built entirely for offline enjoyment with zero real money, zero ads, and zero internet required. Just pure Vegas vibes wherever you are.",
+      "A neon-drenched casino simulator packed with the classics — poker, blackjack, slots, roulette, and more. Built entirely for offline enjoyment with zero real money. Just pure Vegas vibes wherever you are.",
     color: "pink" as const,
     icon: "/icon_cyberpunk.png",
     mockup: "/vegas_cyberpunk_midnight_ui.png",
     features: [
       "Poker, blackjack, slots, roulette & more",
       "Fully offline casino experience",
-      "No real money — no in-app purchases",
-      "Cyberpunk-styled neon aesthetics",
+      "No real money or gambling risk",
+      "Cyberpunk-styled neon aesthetics for iPhone",
     ],
   },
 ] as const;
