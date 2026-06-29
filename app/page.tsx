@@ -208,7 +208,7 @@ export default function Home() {
               </div>
               <div className="flex flex-col items-center">
                 <h4 className="text-xl md:text-2xl font-bold tracking-tight mb-2">Native</h4>
-                <p className="text-sm text-zinc-500 font-medium max-w-[200px] leading-relaxed">Performance</p>
+                <p className="text-sm text-zinc-500 font-medium max-w-[200px] leading-relaxed">Performance, built with Swift</p>
               </div>
               <div className="flex flex-col items-center">
                 <h4 className="text-xl md:text-2xl font-bold tracking-tight mb-2">Always Improving</h4>
