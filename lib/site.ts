@@ -1,8 +1,8 @@
 export const site = {
   name: "403 Studio",
-  tagline: "Quality Apps, Offline & Locally Made.",
+  tagline: "Anywhere. Anytime.",
   description:
-    "Fast, private apps for iPhone — no third-party accounts, securely synced via your own iCloud.",
+    "Thoughtfully designed iPhone apps that are fast, reliable, and made to work wherever life takes you.",
   url: "https://www.403studio.ca",
   email: "hello@403studio.ca",
 } as const;

@@ -34,10 +34,10 @@ export default function Home() {
 
         <div className="max-w-5xl mx-auto text-center flex flex-col items-center">
           <h1 className="text-5xl md:text-7xl font-bold tracking-tighter mb-6">
-            Quality Apps.
+            Anywhere.
             <br />
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
-              Offline & Locally Made.
+              Anytime.
             </span>
           </h1>
           <p className="text-lg md:text-xl text-zinc-600 dark:text-zinc-400 mb-10 max-w-2xl mx-auto leading-relaxed">
@@ -77,9 +77,9 @@ export default function Home() {
       <section id="apps" className="py-32 px-6 max-w-7xl mx-auto">
         <ScrollReveal>
           <div className="text-center mb-20">
-            <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-4">Crafted for focus.</h2>
-            <p className="text-zinc-600 dark:text-zinc-400 text-lg">
-              Designed to work anywhere, especially when you are off the grid.
+            <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-4">Ready Wherever You Are.</h2>
+            <p className="text-zinc-600 dark:text-zinc-400 text-lg max-w-3xl mx-auto leading-relaxed">
+              Designed to work anywhere—from long flights and road trips to cabins, campgrounds, and everywhere in between.
             </p>
           </div>
         </ScrollReveal>
@@ -152,9 +152,9 @@ export default function Home() {
                 <div className="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-500 border border-emerald-500/20 flex items-center justify-center mb-4 mx-auto md:mx-0">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
                 </div>
-                <h3 className="text-lg font-bold mb-2">Privacy First</h3>
+                <h3 className="text-lg font-bold mb-2">Ready Anywhere</h3>
                 <p className="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">
-                  Your data never leaves your device. No telemetry, no analytics, no tracking — ever.
+                  Whether you&apos;re flying, commuting, or completely offline, your apps are always with you.
                 </p>
               </div>
             </ScrollReveal>
@@ -163,9 +163,9 @@ export default function Home() {
                 <div className="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-500 border border-amber-500/20 flex items-center justify-center mb-4 mx-auto md:mx-0">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg>
                 </div>
-                <h3 className="text-lg font-bold mb-2">Native Speed</h3>
+                <h3 className="text-lg font-bold mb-2">Fun Without Friction</h3>
                 <p className="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">
-                  Built with Swift and SwiftUI for instant, fluid performance that web wrappers can never match.
+                  Open an app and start playing. No clutter, no complicated setup.
                 </p>
               </div>
             </ScrollReveal>
@@ -174,9 +174,9 @@ export default function Home() {
                 <div className="w-12 h-12 rounded-xl bg-sky-500/10 text-sky-500 border border-sky-500/20 flex items-center justify-center mb-4 mx-auto md:mx-0">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m2 8 2 2-2 2 2 2-2 2"/><path d="m22 8-2 2 2 2-2 2 2 2"/><line x1="9" x2="15" y1="12" y2="12"/></svg>
                 </div>
-                <h3 className="text-lg font-bold mb-2">Offline Always</h3>
+                <h3 className="text-lg font-bold mb-2">Built for iPhone</h3>
                 <p className="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">
-                  Full functionality without Wi-Fi, cellular, or internet of any kind. Your apps just work.
+                  Smooth, responsive, and designed to feel right at home on iOS.
                 </p>
               </div>
             </ScrollReveal>
@@ -191,30 +191,28 @@ export default function Home() {
       >
         <div className="max-w-4xl mx-auto text-center">
           <ScrollReveal>
-            <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-8">Built for the Apple Ecosystem.</h2>
-            <p className="text-lg md:text-xl text-zinc-600 dark:text-zinc-400 leading-relaxed mb-12">
-              At {site.name}, we believe your data is yours. In an era of mandatory accounts, subscription
-              fatigue, and constant connectivity, we are returning to the roots of great software: fast,
-              natively compiled applications that live entirely on your device.
+            <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-8">Less Noise. More Play.</h2>
+            <p className="text-lg md:text-xl text-zinc-600 dark:text-zinc-400 leading-relaxed mb-12 max-w-2xl mx-auto">
+              We believe great apps shouldn&apos;t overwhelm you with ads, clutter, or unnecessary complexity. Just open the app and enjoy.
             </p>
           </ScrollReveal>
           <ScrollReveal>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-zinc-900 dark:text-white border-t border-zinc-200 dark:border-zinc-800 pt-12">
-              <div>
-                <h4 className="text-4xl font-bold tracking-tighter mb-2">100%</h4>
-                <p className="text-sm text-zinc-500 font-medium">Offline Capable</p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 text-zinc-900 dark:text-white border-t border-zinc-200 dark:border-zinc-800 pt-12">
+              <div className="flex flex-col items-center">
+                <h4 className="text-xl md:text-2xl font-bold tracking-tight mb-2">Made in Canada</h4>
+                <p className="text-sm text-zinc-500 font-medium max-w-[200px] leading-relaxed">Designed and developed in Alberta</p>
               </div>
-              <div>
-                <h4 className="text-4xl font-bold tracking-tighter mb-2">Zero</h4>
-                <p className="text-sm text-zinc-500 font-medium">Cloud Tracking</p>
+              <div className="flex flex-col items-center">
+                <h4 className="text-xl md:text-2xl font-bold tracking-tight mb-2">Built to Play</h4>
+                <p className="text-sm text-zinc-500 font-medium max-w-[200px] leading-relaxed">Regular updates and long-term support</p>
               </div>
-              <div>
-                <h4 className="text-4xl font-bold tracking-tighter mb-2">Native</h4>
-                <p className="text-sm text-zinc-500 font-medium">Performance</p>
+              <div className="flex flex-col items-center">
+                <h4 className="text-xl md:text-2xl font-bold tracking-tight mb-2">Native</h4>
+                <p className="text-sm text-zinc-500 font-medium max-w-[200px] leading-relaxed">Performance</p>
               </div>
-              <div>
-                <h4 className="text-4xl font-bold tracking-tighter mb-2">Swift</h4>
-                <p className="text-sm text-zinc-500 font-medium">& React Tech</p>
+              <div className="flex flex-col items-center">
+                <h4 className="text-xl md:text-2xl font-bold tracking-tight mb-2">Always Improving</h4>
+                <p className="text-sm text-zinc-500 font-medium max-w-[200px] leading-relaxed">New features, refinements, and new apps in development</p>
               </div>
             </div>
           </ScrollReveal>
@@ -226,7 +224,7 @@ export default function Home() {
         <div className="max-w-4xl mx-auto">
           <ScrollReveal>
             <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-center mb-16">
-              Frequently Asked Questions
+              A Few Things You Might Be Wondering.
             </h2>
           </ScrollReveal>
 
@@ -235,14 +233,14 @@ export default function Home() {
               <details className="group rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 p-6 [&_summary::-webkit-details-marker]:hidden">
                 <summary className="flex items-center justify-between cursor-pointer focus:outline-none">
                   <h3 className="text-lg font-bold text-zinc-900 dark:text-zinc-50">
-                    How is my data stored and synced?
+                    What platforms do you support?
                   </h3>
                   <span className="ml-1.5 shrink-0 rounded-full bg-zinc-100 dark:bg-zinc-800 p-1.5 text-zinc-900 dark:text-zinc-50 transition duration-300 group-open:-rotate-180">
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" /></svg>
                   </span>
                 </summary>
-                <p className="mt-4 text-sm leading-relaxed text-zinc-650 dark:text-zinc-400">
-                  Your data resides directly on your device. Any synchronization between your devices is handled securely via Apple iCloud using your personal Apple ID login. Your logs and game records are not available to anyone but you or Apple—we run zero third-party databases, ensuring complete privacy.
+                <p className="mt-4 text-sm leading-relaxed text-zinc-600 dark:text-zinc-400">
+                  403 Studio currently builds exclusively for iPhone. By focusing on one platform, we can create faster, more polished experiences that feel right at home on iOS.
                 </p>
               </details>
             </ScrollReveal>
@@ -251,14 +249,14 @@ export default function Home() {
               <details className="group rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 p-6 [&_summary::-webkit-details-marker]:hidden">
                 <summary className="flex items-center justify-between cursor-pointer focus:outline-none">
                   <h3 className="text-lg font-bold text-zinc-900 dark:text-zinc-50">
-                    How much will the apps cost?
+                    How much do your apps cost?
                   </h3>
                   <span className="ml-1.5 shrink-0 rounded-full bg-zinc-100 dark:bg-zinc-800 p-1.5 text-zinc-900 dark:text-zinc-50 transition duration-300 group-open:-rotate-180">
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" /></svg>
                   </span>
                 </summary>
-                <p className="mt-4 text-sm leading-relaxed text-zinc-650 dark:text-zinc-400">
-                  We are focusing on premium visual polish first. While we are still finalizing our pricing model, we plan to support continued development through a combination of ad-supported versions or optional premium upgrades.
+                <p className="mt-4 text-sm leading-relaxed text-zinc-600 dark:text-zinc-400">
+                  Our goal is simple: build great apps that are easy to enjoy. Some apps are free, while others may offer premium features or one-time upgrades. Pricing is always straightforward and clearly explained.
                 </p>
               </details>
             </ScrollReveal>
@@ -267,14 +265,62 @@ export default function Home() {
               <details className="group rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 p-6 [&_summary::-webkit-details-marker]:hidden">
                 <summary className="flex items-center justify-between cursor-pointer focus:outline-none">
                   <h3 className="text-lg font-bold text-zinc-900 dark:text-zinc-50">
-                    Which platforms are supported?
+                    How often are your apps updated?
                   </h3>
                   <span className="ml-1.5 shrink-0 rounded-full bg-zinc-100 dark:bg-zinc-800 p-1.5 text-zinc-900 dark:text-zinc-50 transition duration-300 group-open:-rotate-180">
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" /></svg>
                   </span>
                 </summary>
-                <p className="mt-4 text-sm leading-relaxed text-zinc-650 dark:text-zinc-400">
-                  Our apps are designed natively and built exclusively for iPhone. Building natively allows us to make interfaces that load instantly, feel incredibly fluid, and run reliably offline.
+                <p className="mt-4 text-sm leading-relaxed text-zinc-600 dark:text-zinc-400">
+                  We&apos;re constantly refining our apps with new features, performance improvements, bug fixes, and fresh content. Every update is an opportunity to make the experience even better.
+                </p>
+              </details>
+            </ScrollReveal>
+
+            <ScrollReveal delay={4}>
+              <details className="group rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 p-6 [&_summary::-webkit-details-marker]:hidden">
+                <summary className="flex items-center justify-between cursor-pointer focus:outline-none">
+                  <h3 className="text-lg font-bold text-zinc-900 dark:text-zinc-50">
+                    Can I request a feature?
+                  </h3>
+                  <span className="ml-1.5 shrink-0 rounded-full bg-zinc-100 dark:bg-zinc-800 p-1.5 text-zinc-900 dark:text-zinc-50 transition duration-300 group-open:-rotate-180">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" /></svg>
+                  </span>
+                </summary>
+                <p className="mt-4 text-sm leading-relaxed text-zinc-600 dark:text-zinc-400">
+                  Absolutely. Some of our best ideas come directly from our community. If there&apos;s something you&apos;d like to see, we&apos;d love to hear from you.
+                </p>
+              </details>
+            </ScrollReveal>
+
+            <ScrollReveal delay={5}>
+              <details className="group rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 p-6 [&_summary::-webkit-details-marker]:hidden">
+                <summary className="flex items-center justify-between cursor-pointer focus:outline-none">
+                  <h3 className="text-lg font-bold text-zinc-900 dark:text-zinc-50">
+                    Why choose 403 Studio?
+                  </h3>
+                  <span className="ml-1.5 shrink-0 rounded-full bg-zinc-100 dark:bg-zinc-800 p-1.5 text-zinc-900 dark:text-zinc-50 transition duration-300 group-open:-rotate-180">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" /></svg>
+                  </span>
+                </summary>
+                <p className="mt-4 text-sm leading-relaxed text-zinc-600 dark:text-zinc-400">
+                  We believe great apps should be simple, dependable, and enjoyable to use. Instead of building dozens of apps, we focus on creating products that are thoughtfully designed, regularly updated, and built to last.
+                </p>
+              </details>
+            </ScrollReveal>
+
+            <ScrollReveal delay={6}>
+              <details className="group rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 p-6 [&_summary::-webkit-details-marker]:hidden">
+                <summary className="flex items-center justify-between cursor-pointer focus:outline-none">
+                  <h3 className="text-lg font-bold text-zinc-900 dark:text-zinc-50">
+                    What&apos;s next for 403 Studio?
+                  </h3>
+                  <span className="ml-1.5 shrink-0 rounded-full bg-zinc-100 dark:bg-zinc-800 p-1.5 text-zinc-900 dark:text-zinc-50 transition duration-300 group-open:-rotate-180">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" /></svg>
+                  </span>
+                </summary>
+                <p className="mt-4 text-sm leading-relaxed text-zinc-600 dark:text-zinc-400">
+                  We&apos;re just getting started. From timeless games to practical everyday tools, we&apos;re building a growing collection of iPhone apps—with plenty more on the way.
                 </p>
               </details>
             </ScrollReveal>
@@ -282,35 +328,18 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── Platform badges ── */}
-      <section className="py-16 px-6 border-t border-zinc-200 dark:border-zinc-800">
-        <ScrollReveal>
-          <div className="max-w-3xl mx-auto text-center">
-            <p className="text-xs font-bold uppercase tracking-widest text-zinc-400 dark:text-zinc-600 mb-6">
-              Coming soon to
-            </p>
-            <div className="flex items-center justify-center text-zinc-450 dark:text-zinc-550">
-              <div className="flex flex-col items-center gap-2">
-                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-zinc-650 dark:text-zinc-350"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></svg>
-                <span className="text-sm font-semibold text-zinc-700 dark:text-zinc-300">iPhone</span>
-              </div>
-            </div>
-          </div>
-        </ScrollReveal>
-      </section>
-
       {/* ── Contact ── */}
-      <section id="contact" className="py-32 px-6 max-w-3xl mx-auto text-center">
+      <section id="contact" className="py-32 px-6 max-w-3xl mx-auto text-center border-t border-zinc-200 dark:border-zinc-800">
         <ScrollReveal>
-          <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-6">Get in touch</h2>
-          <p className="text-lg text-zinc-600 dark:text-zinc-400 leading-relaxed mb-10">
-            Questions about our apps, partnerships, or support? We would love to hear from you.
+          <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-6">Questions? We&apos;ve Got Answers.</h2>
+          <p className="text-lg text-zinc-650 dark:text-zinc-400 leading-relaxed mb-10 max-w-xl mx-auto">
+            If there&apos;s anything else you&apos;d like to know, or if you want to request a feature, we&apos;d love to hear from you.
           </p>
           <a
             href={`mailto:${site.email}`}
             className="inline-block px-8 py-4 rounded-full bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 font-semibold shadow-lg hover:shadow-xl transition-all hover:-translate-y-1"
           >
-            {site.email}
+            Email Us
           </a>
         </ScrollReveal>
       </section>
