@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { site } from "@/lib/site";
 import { MobileNav } from "./MobileNav";
+import { ThemeToggle } from "./ThemeToggle";
 
 export function SiteNav() {
   return (
@@ -9,18 +10,21 @@ export function SiteNav() {
         <Link href="/" className="font-semibold text-lg tracking-tight">
           {site.name}
         </Link>
-        <div className="hidden md:flex gap-8 text-sm font-medium text-zinc-600 dark:text-zinc-400">
-          <Link href="/#apps" className="hover:text-zinc-900 dark:hover:text-zinc-50 transition-colors">
-            Apps
-          </Link>
-          <Link href="/#about" className="hover:text-zinc-900 dark:hover:text-zinc-50 transition-colors">
-            About
-          </Link>
-          <Link href="/#contact" className="hover:text-zinc-900 dark:hover:text-zinc-50 transition-colors">
-            Contact
-          </Link>
+        <div className="flex items-center gap-4">
+          <div className="hidden md:flex gap-8 text-sm font-medium text-zinc-600 dark:text-zinc-400 items-center">
+            <Link href="/#apps" className="hover:text-zinc-900 dark:hover:text-zinc-50 transition-colors">
+              Apps
+            </Link>
+            <Link href="/#about" className="hover:text-zinc-900 dark:hover:text-zinc-50 transition-colors">
+              About
+            </Link>
+            <Link href="/#contact" className="hover:text-zinc-900 dark:hover:text-zinc-50 transition-colors">
+              Contact
+            </Link>
+          </div>
+          <ThemeToggle />
+          <MobileNav />
         </div>
-        <MobileNav />
       </div>
     </nav>
   );
