@@ -142,44 +142,44 @@ export default function Home() {
       </section>
 
       {/* ── Philosophy ── */}
-      <section className="py-24 px-6 border-t border-zinc-200 dark:border-zinc-800">
+      <section className="py-28 px-6 bg-white dark:bg-zinc-950 text-zinc-900 dark:text-white border-t border-zinc-200 dark:border-zinc-900">
         <div className="max-w-5xl mx-auto">
           <ScrollReveal>
-            <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-center mb-16 text-zinc-900 dark:text-white">
               Why we build differently.
             </h2>
           </ScrollReveal>
           <div className="grid md:grid-cols-3 gap-8">
             <ScrollReveal delay={1}>
-              <div className="text-center md:text-left p-6 rounded-2xl bg-white dark:bg-zinc-900 border border-zinc-200/60 dark:border-zinc-800 h-full">
-                <div className="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-500 border border-emerald-500/20 flex items-center justify-center mb-4 mx-auto md:mx-0">
+              <div className="text-left p-8 rounded-3xl bg-zinc-50 dark:bg-zinc-900/40 border border-zinc-200 dark:border-zinc-800/60 h-full hover:border-zinc-300 dark:hover:border-zinc-700/80 transition-all duration-300">
+                <div className="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-500 border border-emerald-500/20 shadow-[0_0_15px_rgba(16,185,129,0.15)] flex items-center justify-center mb-6">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
                 </div>
-                <h3 className="text-lg font-bold mb-2">Ready Anywhere</h3>
-                <p className="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">
-                  Whether you&apos;re flying, commuting, or completely offline, your apps are always with you.
+                <h3 className="text-lg font-bold mb-3 text-zinc-900 dark:text-white">Ready Anywhere</h3>
+                <p className="text-sm text-zinc-650 dark:text-zinc-400 leading-relaxed">
+                  Whether you&apos;re flying, commuting, or offline, your apps are always ready when you are.
                 </p>
               </div>
             </ScrollReveal>
             <ScrollReveal delay={2}>
-              <div className="text-center md:text-left p-6 rounded-2xl bg-white dark:bg-zinc-900 border border-zinc-200/60 dark:border-zinc-800 h-full">
-                <div className="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-500 border border-amber-500/20 flex items-center justify-center mb-4 mx-auto md:mx-0">
+              <div className="text-left p-8 rounded-3xl bg-zinc-50 dark:bg-zinc-900/40 border border-zinc-200 dark:border-zinc-800/60 h-full hover:border-zinc-300 dark:hover:border-zinc-700/80 transition-all duration-300">
+                <div className="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-550 border border-amber-500/20 shadow-[0_0_15px_rgba(245,158,11,0.15)] flex items-center justify-center mb-6">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="12" x="2" y="6" rx="3" ry="3"/><path d="M6 12h4"/><path d="M8 10v4"/><path d="M15 13h.01"/><path d="M18 11h.01"/></svg>
                 </div>
-                <h3 className="text-lg font-bold mb-2">Fun Without Friction</h3>
-                <p className="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">
-                  Open an app and start playing. No clutter, no complicated setup.
+                <h3 className="text-lg font-bold mb-3 text-zinc-900 dark:text-white">Fun Without Friction</h3>
+                <p className="text-sm text-zinc-650 dark:text-zinc-400 leading-relaxed">
+                  Open an app and start playing. No clutter, no complicated setup. Just pure enjoyment.
                 </p>
               </div>
             </ScrollReveal>
             <ScrollReveal delay={3}>
-              <div className="text-center md:text-left p-6 rounded-2xl bg-white dark:bg-zinc-900 border border-zinc-200/60 dark:border-zinc-800 h-full">
-                <div className="w-12 h-12 rounded-xl bg-sky-500/10 text-sky-500 border border-sky-500/20 flex items-center justify-center mb-4 mx-auto md:mx-0">
+              <div className="text-left p-8 rounded-3xl bg-zinc-50 dark:bg-zinc-900/40 border border-zinc-200 dark:border-zinc-800/60 h-full hover:border-zinc-300 dark:hover:border-zinc-700/80 transition-all duration-300">
+                <div className="w-12 h-12 rounded-xl bg-sky-500/10 text-sky-500 border border-sky-500/20 shadow-[0_0_15px_rgba(14,165,233,0.15)] flex items-center justify-center mb-6">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
                 </div>
-                <h3 className="text-lg font-bold mb-2">Built for iPhone</h3>
-                <p className="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">
-                  Smooth, responsive, and designed to feel right at home on iOS.
+                <h3 className="text-lg font-bold mb-3 text-zinc-900 dark:text-white">Built for iPhone</h3>
+                <p className="text-sm text-zinc-650 dark:text-zinc-400 leading-relaxed">
+                  Smooth, responsive, and beautifully designed to feel right at home on iOS.
                 </p>
               </div>
             </ScrollReveal>
@@ -190,32 +190,94 @@ export default function Home() {
       {/* ── About ── */}
       <section
         id="about"
-        className="py-32 px-6 bg-zinc-100 dark:bg-zinc-900/50"
+        className="py-32 px-6 bg-zinc-100 dark:bg-zinc-950 text-zinc-900 dark:text-white border-t border-zinc-200/80 dark:border-zinc-900/80"
       >
-        <div className="max-w-4xl mx-auto text-center">
+        <div className="max-w-5xl mx-auto text-center">
           <ScrollReveal>
-            <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-8">Less Noise. More Play.</h2>
-            <p className="text-lg md:text-xl text-zinc-600 dark:text-zinc-400 leading-relaxed mb-12 max-w-2xl mx-auto">
+            <div className="flex flex-col items-center justify-center mb-6">
+              {/* Official 403 Studio Logo */}
+              <div className="relative w-20 h-20 overflow-hidden select-none mb-4 dark:invert-0 invert">
+                <Image
+                  src="/logo.jpg"
+                  alt="403 Studio Logo"
+                  fill
+                  sizes="80px"
+                  priority
+                  className="object-cover"
+                />
+              </div>
+              <div className="flex items-center justify-center gap-4 text-xs font-semibold tracking-[0.25em] text-zinc-500">
+                <span className="w-8 h-px bg-gradient-to-r from-transparent to-zinc-300 dark:to-zinc-700" />
+                <span>403 STUDIO</span>
+                <span className="w-8 h-px bg-gradient-to-l from-transparent to-zinc-700" />
+              </div>
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-zinc-900 dark:text-white mb-6">Less Noise. More Play.</h2>
+            <p className="text-lg md:text-xl text-zinc-650 dark:text-zinc-400 leading-relaxed mb-16 max-w-2xl mx-auto">
               We believe great apps shouldn&apos;t overwhelm you with ads, clutter, or unnecessary complexity. Just open the app and enjoy.
             </p>
           </ScrollReveal>
           <ScrollReveal>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 text-zinc-900 dark:text-white border-t border-zinc-200 dark:border-zinc-800 pt-12">
-              <div className="flex flex-col items-center">
-                <h4 className="text-xl md:text-2xl font-bold tracking-tight mb-2 whitespace-nowrap">Made in Canada</h4>
-                <p className="text-sm text-zinc-500 font-medium max-w-[200px] leading-relaxed">Designed and developed in Alberta</p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-y-12 gap-x-4 text-center divide-y md:divide-y-0 md:divide-x divide-zinc-200 dark:divide-zinc-800/40 pt-16 border-t border-zinc-200 dark:border-zinc-800/60">
+              <div className="flex flex-col items-center px-4">
+                <div className="mb-4 flex justify-center">
+                  <div className="w-12 h-12 rounded-xl bg-zinc-950 border border-zinc-800 flex items-center justify-center shadow-sm">
+                    <Image
+                      src="/maple_leaf.png"
+                      alt="Made in Canada"
+                      width={32}
+                      height={32}
+                      className="w-8 h-8 object-contain mix-blend-screen filter brightness-110"
+                    />
+                  </div>
+                </div>
+                <h4 className="text-base font-bold text-zinc-900 dark:text-white mb-2 whitespace-nowrap">Made in Canada</h4>
+                <p className="text-sm text-zinc-500 dark:text-zinc-400 font-medium max-w-[200px] leading-relaxed">Designed and developed in Alberta.</p>
               </div>
-              <div className="flex flex-col items-center">
-                <h4 className="text-xl md:text-2xl font-bold tracking-tight mb-2 whitespace-nowrap">Built to Play</h4>
-                <p className="text-sm text-zinc-500 font-medium max-w-[200px] leading-relaxed">Regular updates and long-term support</p>
+              <div className="flex flex-col items-center px-4 pt-8 md:pt-0">
+                <div className="mb-4 flex justify-center">
+                  <div className="w-12 h-12 rounded-xl bg-zinc-950 border border-zinc-800 flex items-center justify-center shadow-sm">
+                    <Image
+                      src="/built_to_play.png"
+                      alt="Built to Play"
+                      width={32}
+                      height={32}
+                      className="w-8 h-8 object-contain mix-blend-screen filter brightness-110"
+                    />
+                  </div>
+                </div>
+                <h4 className="text-base font-bold text-zinc-900 dark:text-white mb-2 whitespace-nowrap">Built to Play</h4>
+                <p className="text-sm text-zinc-500 dark:text-zinc-400 font-medium max-w-[200px] leading-relaxed">Regular updates and long-term support.</p>
               </div>
-              <div className="flex flex-col items-center">
-                <h4 className="text-xl md:text-2xl font-bold tracking-tight mb-2 whitespace-nowrap">Native Performance</h4>
-                <p className="text-sm text-zinc-500 font-medium max-w-[200px] leading-relaxed">Built for iPhone</p>
+              <div className="flex flex-col items-center px-4 pt-8 md:pt-0">
+                <div className="mb-4 flex justify-center">
+                  <div className="w-12 h-12 rounded-xl bg-zinc-950 border border-zinc-800 flex items-center justify-center shadow-sm">
+                    <Image
+                      src="/native_performance.png"
+                      alt="Native Performance"
+                      width={32}
+                      height={32}
+                      className="w-8 h-8 object-contain mix-blend-screen filter brightness-110"
+                    />
+                  </div>
+                </div>
+                <h4 className="text-base font-bold text-zinc-900 dark:text-white mb-2 whitespace-nowrap">Native Performance</h4>
+                <p className="text-sm text-zinc-500 dark:text-zinc-400 font-medium max-w-[200px] leading-relaxed">Built for iPhone. Fast, smooth, reliable.</p>
               </div>
-              <div className="flex flex-col items-center">
-                <h4 className="text-xl md:text-2xl font-bold tracking-tight mb-2 whitespace-nowrap">Always Improving</h4>
-                <p className="text-sm text-zinc-500 font-medium max-w-[200px] leading-relaxed">New features, refinements, and new apps in development</p>
+              <div className="flex flex-col items-center px-4 pt-8 md:pt-0">
+                <div className="mb-4 flex justify-center">
+                  <div className="w-12 h-12 rounded-xl bg-zinc-950 border border-zinc-800 flex items-center justify-center shadow-sm">
+                    <Image
+                      src="/always_improving.png"
+                      alt="Always Improving"
+                      width={32}
+                      height={32}
+                      className="w-8 h-8 object-contain mix-blend-screen filter brightness-110"
+                    />
+                  </div>
+                </div>
+                <h4 className="text-base font-bold text-zinc-900 dark:text-white mb-2 whitespace-nowrap">Always Improving</h4>
+                <p className="text-sm text-zinc-500 dark:text-zinc-400 font-medium max-w-[200px] leading-relaxed">New features, refinements, and new apps in development.</p>
               </div>
             </div>
           </ScrollReveal>
