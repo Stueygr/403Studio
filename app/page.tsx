@@ -4,6 +4,8 @@ import { SiteFooter } from "@/components/SiteFooter";
 import { SiteNav } from "@/components/SiteNav";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { BackToTop } from "@/components/BackToTop";
+import { AppStoreBadge } from "@/components/AppStoreBadge";
+import { AppCardMockup } from "@/components/AppCardMockup";
 import { apps, site } from "@/lib/site";
 
 const colorStyles = {
@@ -109,21 +111,21 @@ export default function Home() {
                     <h3 className="text-xl font-bold mb-2 group-hover:text-zinc-900 dark:group-hover:text-white transition-colors">
                       {app.name}
                     </h3>
-                    <p className="text-zinc-600 dark:text-zinc-400 text-sm leading-relaxed mb-6 flex-grow">
+                    <p className="text-zinc-600 dark:text-zinc-400 text-sm leading-relaxed mb-4 flex-grow">
                       {app.description}
                     </p>
 
-                    {/* App Preview */}
-                    <div className="relative w-full h-44 rounded-xl overflow-hidden mb-6 border border-zinc-200/60 dark:border-zinc-800 bg-zinc-100 dark:bg-zinc-950">
-                      <Image
-                        src={app.mockup}
-                        alt={`${app.name} interface preview`}
-                        fill
-                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                        className="object-cover object-top select-none group-hover:scale-105 transition-transform duration-700"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-white/10 via-transparent to-transparent dark:from-zinc-950/20 pointer-events-none" />
+                    {/* App Store Badge */}
+                    <div className="mb-6 scale-90 origin-left">
+                      <AppStoreBadge />
                     </div>
+
+                    {/* App Preview Mockup (Interactive 3D Tilt) */}
+                    <AppCardMockup
+                      src={app.mockup}
+                      alt={`${app.name} interface preview`}
+                      glowColor={app.color}
+                    />
 
                     <Link
                       href={`/apps/${app.slug}`}
