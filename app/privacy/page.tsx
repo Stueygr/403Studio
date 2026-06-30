@@ -3,52 +3,64 @@ import { LegalLayout } from "@/components/LegalLayout";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy",
-  description: `Privacy policy for ${site.name} and all of its applications.`,
+  title: "Privacy Policy — 403 Studio",
+  description: `Privacy Policy for ${site.name} website and our suite of iOS applications.`,
 };
 
 export default function PrivacyPage() {
   return (
     <LegalLayout title="Privacy Policy">
       <p>
-        <strong>Last updated:</strong> June 29, 2026
+        <strong>Last updated:</strong> June 30, 2026
       </p>
       <p>
-        {site.name} builds and publishes iPhone applications. We believe your personal data should remain private. This policy outlines how your data is handled across all of our apps.
-      </p>
-
-      <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-50 mt-10 mb-4">1. Data Storage &amp; Privacy</h2>
-      <p>
-        All {site.name} apps operate entirely locally on your iPhone. Your data — including game progress, flight logs, scores, preferences, and statistics — is stored directly on your device. We do not run third-party databases, and we never collect, store, or sell your personal data.
+        At {site.name}, your privacy is a core design principle, not an afterthought. We build offline-first applications that protect your digital autonomy. This Privacy Policy explains our commitment to transparency and details how data is handled across our website and all of our software applications.
       </p>
 
-      <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-50 mt-10 mb-4">2. Apple iCloud Syncing</h2>
+      <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-50 mt-10 mb-4">1. Information We Do Not Collect</h2>
       <p>
-        Some of our apps support syncing data across your personal devices. This synchronization is handled securely and directly through Apple iCloud via your personal Apple ID. {site.name} has no access to your iCloud account, your credentials, or the synced data.
+        Because we build applications that run locally and utilize Apple&apos;s native ecosystem, {site.name} does not collect, store, share, or sell any of your personal information.
+      </p>
+      <ul className="list-disc pl-6 space-y-2 text-zinc-650 dark:text-zinc-400">
+        <li><strong>No User Accounts:</strong> You do not need to register, create a username, or set up a profile to use our apps.</li>
+        <li><strong>No Telemetry or Tracking:</strong> We do not integrate analytics libraries to track your in-app actions, mouse paths, screen times, or behavior.</li>
+        <li><strong>No Crash Databases:</strong> Crash reports are handled exclusively through Apple&apos;s standard App Store diagnostics. We do not transmit crash logs to third-party reporting servers.</li>
+      </ul>
+
+      <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-50 mt-10 mb-4">2. Application Data Storage</h2>
+      <p>
+        All application files, flight logs, duty calculations, game records, puzzle stats, and custom settings reside entirely inside your iPhone&apos;s local sandbox storage. This data is private and remains fully on your device unless you choose to delete the application, export data manually, or sync it using Apple iCloud.
       </p>
 
-      <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-50 mt-10 mb-4">3. Third-Party Analytics &amp; Ads</h2>
+      <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-50 mt-10 mb-4">3. Apple iCloud Syncing</h2>
       <p>
-        We do not integrate any tracking SDKs, cookies, or third-party analytics libraries into our apps. If we offer ad-supported features, ad delivery is handled securely using native iOS components which respect your system-level tracking preferences.
+        If you enable iCloud synchronization inside our apps, your local data is synchronized directly and securely with Apple&apos;s CloudKit servers using your personal Apple ID. 
+      </p>
+      <p>
+        This process is governed entirely by Apple&apos;s iCloud security and privacy policies. {site.name} does not manage these databases, has no access to your iCloud files or login credentials, and cannot read, alter, or recover any synchronized data.
       </p>
 
-      <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-50 mt-10 mb-4">4. Children&apos;s Privacy</h2>
+      <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-50 mt-10 mb-4">4. Website Visitor Data</h2>
       <p>
-        Our apps do not knowingly collect personal information from children under the age of 13. Since all data remains on-device and we do not collect any user data, our apps are safe for users of all ages.
+        Our website (<a href={site.url} className="text-blue-500 hover:underline">www.403studio.ca</a>) is a static marketing landing page. We do not use tracking pixels, behavioral cookies, or visitor identification cookies. If you send us an email inquiry, we will only use your email address to respond to your specific questions, and we will never share your contact details.
       </p>
 
-      <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-50 mt-10 mb-4">5. Changes to This Policy</h2>
+      <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-50 mt-10 mb-4">5. Children&apos;s Privacy</h2>
       <p>
-        We may update this Privacy Policy from time to time. Any changes will be reflected on this page with an updated revision date. Continued use of our apps following any changes indicates your acceptance of the updated policy.
+        Because our apps collect zero personal information, they are fully compliant with children&apos;s privacy regulations globally, including the Children&apos;s Online Privacy Protection Act (COPPA). We do not solicit or gather data from children under the age of 13.
       </p>
 
-      <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-50 mt-10 mb-4">6. Contact Information</h2>
+      <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-50 mt-10 mb-4">6. Jurisdiction & Legal Compliance</h2>
       <p>
-        For privacy inquiries or support questions, please email us at{" "}
+        {site.name} is headquartered in Alberta, Canada. We operate in compliance with the Personal Information Protection Act (PIPA) of Alberta and the Personal Information Protection and Electronic Documents Act (PIPEDA) of Canada. By design, our zero-data collection model complies with the General Data Protection Regulation (GDPR) and the California Consumer Privacy Act (CCPA).
+      </p>
+
+      <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-50 mt-10 mb-4">7. Contact Information</h2>
+      <p>
+        If you have any questions or concerns regarding our privacy practices, please contact us at:{" "}
         <a href={`mailto:${site.email}`} className="text-blue-500 hover:underline">
           {site.email}
         </a>
-        .
       </p>
     </LegalLayout>
   );

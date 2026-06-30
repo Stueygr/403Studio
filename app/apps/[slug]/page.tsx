@@ -133,9 +133,26 @@ export default async function AppPage({ params }: Props) {
               <div className="rounded-2xl border border-zinc-200/85 dark:border-zinc-800 bg-zinc-100 dark:bg-zinc-900/50 p-6 md:p-8 flex flex-col sm:flex-row items-center justify-between gap-6">
                 <div className="flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left">
                   <AppStoreBadge />
-                  <p className="text-xs text-zinc-500 dark:text-zinc-450 leading-relaxed max-w-xs">
-                    Exclusively for iPhone. Securely synchronized via your own personal iCloud.
-                  </p>
+                  <div className="flex flex-col items-center sm:items-start">
+                    <p className="text-xs text-zinc-500 dark:text-zinc-450 leading-relaxed max-w-xs mb-2">
+                      Exclusively for iPhone. Securely synchronized via your own personal iCloud.
+                    </p>
+                    <div className="flex gap-3 text-[10px] sm:text-xs text-zinc-450 dark:text-zinc-550 font-medium">
+                      <Link
+                        href={`/privacy/${app.slug}`}
+                        className="hover:underline hover:text-zinc-700 dark:hover:text-zinc-300 transition-colors"
+                      >
+                        Privacy Policy
+                      </Link>
+                      <span>·</span>
+                      <Link
+                        href={`/terms/${app.slug}`}
+                        className="hover:underline hover:text-zinc-700 dark:hover:text-zinc-300 transition-colors"
+                      >
+                        Terms of Service
+                      </Link>
+                    </div>
+                  </div>
                 </div>
                 <a
                   href={`mailto:${site.email}?subject=${encodeURIComponent(`${app.name} — notify me`)}`}
