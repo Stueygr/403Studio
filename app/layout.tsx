@@ -20,6 +20,23 @@ export const metadata: Metadata = {
     template: `%s — ${site.name}`,
   },
   description: site.description,
+  keywords: [
+    "403 Studio",
+    "iPhone apps",
+    "offline iOS games",
+    "offline apps",
+    "Sudoku offline",
+    "Chess offline",
+    "Canadian Aviation Regulations",
+    "flight logger CARs 700",
+    "Alberta app developer",
+    "no wifi games",
+    "casino simulator offline",
+    "iOS developer Calgary"
+  ],
+  alternates: {
+    canonical: "./",
+  },
   openGraph: {
     title: site.name,
     description: site.description,

@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteNav } from "@/components/SiteNav";
 import { apps, site } from "@/lib/site";
+import { JsonLd } from "@/components/JsonLd";
 
 import { AppStoreBadge } from "@/components/AppStoreBadge";
 import { ScreenshotGallery } from "@/components/ScreenshotGallery";
@@ -29,6 +30,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `${app.name} — ${app.tagline}`,
     description: app.description,
+    alternates: {
+      canonical: `/apps/${slug}`,
+    },
   };
 }
 
@@ -60,9 +64,37 @@ export default async function AppPage({ params }: Props) {
 
 
 
+  const appSchema = {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": app.name,
+    "description": app.description,
+    "operatingSystem": "iOS",
+    "applicationCategory": app.slug === "pilot-logbook"
+      ? "UtilitiesApplication"
+      : app.slug === "vegas-cyberpunk-midnight"
+      ? "CasinoApplication"
+      : "GameApplication",
+    "offers": {
+      "@type": "Offer",
+      "price": "0.00",
+      "priceCurrency": "CAD"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "403 Studio",
+      "url": "https://www.403studio.ca"
+    },
+    "screenshot": "screenshots" in app && app.screenshots
+      ? app.screenshots.map((ss) => `${site.url}${ss.src}`)
+      : [`${site.url}${app.mockup}`],
+    "image": `${site.url}${app.icon}`
+  };
+
   return (
     <div className="min-h-screen bg-zinc-50 dark:bg-zinc-950 text-zinc-900 dark:text-zinc-50 selection:bg-blue-500/30">
       <SiteNav />
+      <JsonLd data={appSchema} />
 
       <main className="pt-32 pb-24 px-6">
         <div className="max-w-6xl mx-auto">

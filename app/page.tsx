@@ -7,6 +7,7 @@ import { BackToTop } from "@/components/BackToTop";
 import { AppStoreBadge } from "@/components/AppStoreBadge";
 import { AppCardMockup } from "@/components/AppCardMockup";
 import { apps, site } from "@/lib/site";
+import { JsonLd } from "@/components/JsonLd";
 
 const colorStyles = {
   blue: {
@@ -27,9 +28,43 @@ const colorStyles = {
 } as const;
 
 export default function Home() {
+  const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": site.name,
+    "url": site.url,
+    "logo": `${site.url}/logo.jpg`,
+    "email": site.email,
+    "description": site.description,
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Calgary",
+      "addressRegion": "AB",
+      "addressCountry": "CA"
+    },
+    "sameAs": [
+      "https://github.com/Stueygr"
+    ]
+  };
+
+  const websiteSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": site.name,
+    "url": site.url,
+    "description": site.description,
+    "publisher": {
+      "@type": "Organization",
+      "name": site.name,
+      "logo": `${site.url}/logo.jpg`
+    }
+  };
+
   return (
     <div className="min-h-screen bg-zinc-50 dark:bg-zinc-950 text-zinc-900 dark:text-zinc-50 selection:bg-blue-500/30">
       <SiteNav />
+      <JsonLd data={organizationSchema} />
+      <JsonLd data={websiteSchema} />
 
       {/* ── Hero ── */}
       <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden px-6 pt-24 pb-16">
