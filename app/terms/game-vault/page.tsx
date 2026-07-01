@@ -5,6 +5,9 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Terms of Service — Game Vault",
   description: `Official Terms of Service for Game Vault by ${site.name}.`,
+  alternates: {
+    canonical: "/terms/game-vault",
+  },
 };
 
 export default function GameVaultTermsPage() {

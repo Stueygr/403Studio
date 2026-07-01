@@ -5,6 +5,9 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Terms of Service — Vegas Cyberpunk Midnight",
   description: `Official Terms of Service for Vegas Cyberpunk Midnight by ${site.name}.`,
+  alternates: {
+    canonical: "/terms/vegas-cyberpunk-midnight",
+  },
 };
 
 export default function VegasCyberpunkTermsPage() {

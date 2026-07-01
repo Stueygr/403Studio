@@ -5,6 +5,9 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Terms of Service — Pilot Logbook",
   description: `Official Terms of Service for Pilot Logbook by ${site.name}.`,
+  alternates: {
+    canonical: "/terms/pilot-logbook",
+  },
 };
 
 export default function PilotLogbookTermsPage() {

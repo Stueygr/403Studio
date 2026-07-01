@@ -5,6 +5,9 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Privacy Policy — Game Vault",
   description: `Official Privacy Policy for Game Vault by ${site.name}.`,
+  alternates: {
+    canonical: "/privacy/game-vault",
+  },
 };
 
 export default function GameVaultPrivacyPage() {

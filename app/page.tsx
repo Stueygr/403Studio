@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { SiteFooter } from "@/components/SiteFooter";
@@ -8,6 +9,12 @@ import { AppStoreBadge } from "@/components/AppStoreBadge";
 import { AppCardMockup } from "@/components/AppCardMockup";
 import { apps, site } from "@/lib/site";
 import { JsonLd } from "@/components/JsonLd";
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "/",
+  },
+};
 
 const colorStyles = {
   blue: {

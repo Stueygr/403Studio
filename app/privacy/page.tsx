@@ -5,6 +5,9 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Privacy Policy — 403 Studio",
   description: `Official Privacy Policy for ${site.name} website and our suite of iOS applications.`,
+  alternates: {
+    canonical: "/privacy",
+  },
 };
 
 export default function PrivacyPage() {

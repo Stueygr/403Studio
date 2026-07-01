@@ -5,6 +5,9 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Terms of Service — 403 Studio",
   description: `Official Terms of Service governing the use of ${site.name} website and our applications.`,
+  alternates: {
+    canonical: "/terms",
+  },
 };
 
 export default function TermsPage() {

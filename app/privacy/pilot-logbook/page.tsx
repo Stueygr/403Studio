@@ -5,6 +5,9 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Privacy Policy — Pilot Logbook",
   description: `Privacy policy for Pilot Logbook by ${site.name}.`,
+  alternates: {
+    canonical: "/privacy/pilot-logbook",
+  },
 };
 
 export default function PilotLogbookPrivacyPage() {
