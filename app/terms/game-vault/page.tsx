@@ -4,46 +4,53 @@ import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Terms of Service — Game Vault",
-  description: `Terms of service for Game Vault by ${site.name}.`,
+  description: `Official Terms of Service for Game Vault by ${site.name}.`,
 };
 
 export default function GameVaultTermsPage() {
   return (
     <LegalLayout title="Terms of Service — Game Vault">
       <p>
-        <strong>Last updated:</strong> June 29, 2026
+        <strong>Last updated:</strong> June 30, 2026
       </p>
       <p>
-        By installing or using the Game Vault application, you agree to these Terms of Service. If you do not agree to these terms, please do not install or use the app.
-      </p>
-
-      <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-50 mt-10 mb-4">1. License & Scope of Use</h2>
-      <p>
-        {site.name} grants you a personal, non-exclusive, non-transferable, and revocable license to use Game Vault on your personal iPhone devices for entertainment purposes only, in accordance with the Apple App Store Terms of Service.
+        These Terms of Service govern your use of the Game Vault application (the &quot;App&quot;). By installing or using Game Vault, you agree to these Terms. If you do not agree, please do not use the App.
       </p>
 
-      <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-50 mt-10 mb-4">2. Local Data & Backup Disclaimer</h2>
+      <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-50 mt-10 mb-4">1. Scope of License</h2>
       <p>
-        Game Vault stores its game files, records, and preferences locally on your device. While you can synchronize your progress across devices via Apple iCloud, {site.name} does not operate cloud backends and cannot recover lost data, scores, or achievements.
+        {site.name} grants you a personal, non-exclusive, non-transferable, and revocable license to run Game Vault on your personal iPhone devices for entertainment and offline play purposes only, in accordance with these Terms and Apple App Store rules.
       </p>
 
-      <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-50 mt-10 mb-4">3. Limitation of Liability</h2>
+      <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-50 mt-10 mb-4">2. Local Data Backup Responsibility</h2>
       <p>
-        Game Vault is provided &quot;as is&quot; and &quot;as available,&quot; without warranty of any kind. To the maximum extent permitted by law, {site.name} disclaims all liability for any direct, indirect, incidental, or consequential damages resulting from the use or inability to use the application.
+        Game Vault stores its game files, records, levels, scores, and preferences locally on your device. We do not operate cloud backends and cannot recover lost data, scores, or achievements. You are responsible for keeping local device backups or syncing via Apple iCloud.
       </p>
 
-      <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-50 mt-10 mb-4">4. Updates & Changes</h2>
-      <p>
-        We may update Game Vault from time to time to add new games, fix bugs, or tweak features. These Terms will apply to all future updates. Continued use of the application following updates indicates your acceptance of any revised terms.
+      <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-50 mt-10 mb-4">3. Disclaimer of Warranties</h2>
+      <p className="font-semibold text-zinc-900 dark:text-zinc-50 uppercase tracking-wide text-xs">
+        THE FOLLOWING SECTION IS IMPORTANT. PLEASE READ IT CAREFULLY.
+      </p>
+      <p className="uppercase text-sm leading-relaxed text-zinc-700 dark:text-zinc-350 bg-zinc-100 dark:bg-zinc-900/50 p-4 rounded-xl border border-zinc-200 dark:border-zinc-800">
+        GAME VAULT IS PROVIDED &quot;AS IS&quot; AND &quot;AS AVAILABLE,&quot; WITHOUT WARRANTY OF ANY KIND. TO THE MAXIMUM EXTENT PERMITTED BY LAW, 403 STUDIO DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT. WE DO NOT WARRANT THAT THE APP WILL BE FREE FROM BUGS, ERRORS, OR SYSTEM INTERRUPTIONS.
       </p>
 
-      <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-50 mt-10 mb-4">5. Contact Support</h2>
+      <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-50 mt-10 mb-4">4. Limitation of Liability</h2>
+      <p className="uppercase text-sm leading-relaxed text-zinc-700 dark:text-zinc-350 bg-zinc-100 dark:bg-zinc-900/50 p-4 rounded-xl border border-zinc-200 dark:border-zinc-800">
+        TO THE MAXIMUM EXTENT PERMITTED BY LAW, IN NO EVENT SHALL 403 STUDIO OR ITS DEVELOPERS BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, OR CONSEQUENTIAL DAMAGES (INCLUDING BUT NOT LIMITED TO LOSS OF HIGH SCORES, GAME RECORDS, OR OTHER DATA) ARISING FROM THE USE OR INABILITY TO USE THE APPLICATION, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. OUR CUMULATIVE LIABILITY SHALL NOT EXCEED $10.00 CAD.
+      </p>
+
+      <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-50 mt-10 mb-4">5. Governing Law & Dispute Resolution</h2>
       <p>
-        If you have any questions about these Terms, please contact support at{" "}
+        These Terms shall be governed by, and construed in accordance with, the laws of the Province of Alberta, Canada. Any legal actions arising under these terms shall be brought exclusively in the courts located in Calgary, Alberta, Canada.
+      </p>
+
+      <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-50 mt-10 mb-4">6. Contact Support</h2>
+      <p>
+        If you have any questions or feedback regarding these terms, please contact:{" "}
         <a href={`mailto:${site.email}`} className="text-blue-500 hover:underline">
           {site.email}
         </a>
-        .
       </p>
     </LegalLayout>
   );

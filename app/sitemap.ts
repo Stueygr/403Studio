@@ -11,6 +11,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
+  const appLegalPages = apps.flatMap((app) => [
+    {
+      url: `${site.url}/privacy/${app.slug}`,
+      lastModified: new Date(),
+      changeFrequency: "yearly" as const,
+      priority: 0.3,
+    },
+    {
+      url: `${site.url}/terms/${app.slug}`,
+      lastModified: new Date(),
+      changeFrequency: "yearly" as const,
+      priority: 0.3,
+    },
+  ]);
+
   return [
     {
       url: site.url,
@@ -19,6 +34,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1,
     },
     ...appPages,
+    ...appLegalPages,
     {
       url: `${site.url}/privacy`,
       lastModified: new Date(),

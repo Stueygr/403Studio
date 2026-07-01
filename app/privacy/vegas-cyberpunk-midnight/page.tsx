@@ -14,7 +14,7 @@ export default function VegasCyberpunkPrivacyPage() {
         <strong>Last updated:</strong> June 30, 2026
       </p>
       <p>
-        Vegas Cyberpunk Midnight is built and published by {site.name}. We believe your simulation stats and offline gaming metrics should remain entirely your own.
+        Vegas Cyberpunk Midnight is built and published by {site.name}. We believe your simulation stats and offline gaming metrics should remain entirely your own. This policy outlines how your data is handled.
       </p>
 
       <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-50 mt-10 mb-4">1. Game Stats & Privacy</h2>
@@ -27,12 +27,17 @@ export default function VegasCyberpunkPrivacyPage() {
         If you enable cross-device progress syncing, your bankroll balances and slots progress are synchronized securely and directly to Apple&apos;s CloudKit servers using your personal Apple ID credentials. {site.name} has no access to your iCloud account or any synced gaming variables.
       </p>
 
-      <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-50 mt-10 mb-4">3. Ads & System-Level Tracking</h2>
+      <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-50 mt-10 mb-4">3. Device Permissions & SDKs</h2>
       <p>
-        If we offer ad-supported gameplay features, ad delivery is handled securely using Apple&apos;s native iOS components which strictly respect your system-level tracking preferences. We do not track you across other applications.
+        Vegas Cyberpunk Midnight does not request or require access to sensitive system permissions such as GPS Location Services, Contacts, Microphone, or Camera. The app does not integrate any third-party behavioral tracking SDKs.
       </p>
 
-      <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-50 mt-10 mb-4">4. Contact Information</h2>
+      <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-50 mt-10 mb-4">4. GDPR & CCPA Rights</h2>
+      <p>
+        Because we do not store, transfer, or process user data on our own servers, your regulatory rights under GDPR or CCPA (access, export, modify, or erase your data) are fully under your own control. You can delete all local records simply by deleting the app or purging your local iCloud app storage.
+      </p>
+
+      <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-50 mt-10 mb-4">5. Contact Information</h2>
       <p>
         For inquiries regarding our privacy standards, contact us at:{" "}
         <a href={`mailto:${site.email}`} className="text-blue-500 hover:underline">

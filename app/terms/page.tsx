@@ -4,7 +4,7 @@ import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Terms of Service — 403 Studio",
-  description: `Terms of Service for ${site.name} website and our suite of applications.`,
+  description: `Official Terms of Service governing the use of ${site.name} website and our applications.`,
 };
 
 export default function TermsPage() {
@@ -14,53 +14,59 @@ export default function TermsPage() {
         <strong>Last updated:</strong> June 30, 2026
       </p>
       <p>
-        Welcome to {site.name}. These Terms of Service (&quot;Terms&quot;) govern your access to and use of the website located at <a href={site.url} className="text-blue-500 hover:underline">www.403studio.ca</a> and our mobile software applications.
+        These Terms of Service (&quot;Terms&quot;) constitute a legally binding agreement between you (&quot;User&quot; or &quot;you&quot;) and 403 Studio (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;) regarding your use of the website located at <a href={site.url} className="text-blue-500 hover:underline">www.403studio.ca</a> (the &quot;Site&quot;) and our mobile applications (the &quot;Applications&quot;).
       </p>
       <p>
-        By accessing our website or downloading, installing, or using our applications, you agree to be bound by these Terms. If you do not agree to these terms, please do not download, install, or use our software.
-      </p>
-
-      <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-50 mt-10 mb-4">1. License Grant</h2>
-      <p>
-        {site.name} grants you a limited, non-exclusive, non-transferable, non-sublicensable, and revocable license to download, install, and run a copy of our applications on Apple-branded iOS devices that you own or control, for personal, non-commercial use, subject to these Terms and Apple App Store guidelines.
+        By downloading, installing, accessing, or using our Site or Applications, you acknowledge that you have read, understood, and agree to be bound by these Terms. If you do not agree, please do not access or use our software or Site.
       </p>
 
-      <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-50 mt-10 mb-4">2. User Responsibilities & Data Backups</h2>
+      <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-50 mt-10 mb-4">1. License Grant & Restrictions</h2>
       <p>
-        Because our applications run locally and do not store your data on our own cloud infrastructure, you are solely responsible for:
+        We grant you a personal, non-exclusive, non-transferable, non-sublicensable, and revocable license to run our Applications on Apple-branded iOS devices that you own or control, in accordance with these Terms and the Apple Media Services Terms and Conditions.
       </p>
-      <ul className="list-disc pl-6 space-y-2 text-zinc-650 dark:text-zinc-400">
-        <li>Maintaining secure backups of your devices and application contents (e.g., via Apple iCloud or manual file exports).</li>
-        <li>Protecting access to your physical devices.</li>
-        <li>Ensuring that your use of the applications comply with all local, regional, and national laws.</li>
-      </ul>
-
-      <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-50 mt-10 mb-4">3. Flight Calculations & Compliance Responsibility</h2>
       <p>
-        For apps assisting with specialized tracking (such as pilot logs or flight parameters), <strong>these apps are not official certification platforms.</strong> You remain solely responsible for manually verifying the accuracy of all calculations, logs, and compliance parameters against official regulatory flight safety guidelines.
+        You shall not: (a) decompile, reverse engineer, or disassemble the Applications; (b) distribute, rent, lease, lend, or sell the Applications; or (c) modify or create derivative works based on the Applications or Site content.
       </p>
 
-      <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-50 mt-10 mb-4">4. Intellectual Property</h2>
+      <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-50 mt-10 mb-4">2. Intellectual Property Ownership</h2>
       <p>
-        All software, source code, designs, mockups, vector artwork, logos, icons, trademarks, and text elements displayed on our website or within our applications are the exclusive intellectual property of {site.name}. You may not copy, reverse engineer, decompile, modify, distribute, or create derivative works of our intellectual property without prior written consent.
+        All rights, titles, and interests in and to the Site and Applications—including all source code, graphic designs, mockups, vector artwork, logos, icons, trademarks, and text elements—are and shall remain the exclusive intellectual property of {site.name}. These properties are protected by Canadian and international copyright, trademark, and intellectual property laws.
+      </p>
+
+      <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-50 mt-10 mb-4">3. Local Data Responsibility</h2>
+      <p>
+        Because our Applications run locally and do not store your data on our own cloud infrastructure, you are solely responsible for maintaining secure backups of your device files and configurations. {site.name} is not responsible for data loss resulting from application deletion, device failures, or iCloud sync interruptions.
+      </p>
+
+      <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-50 mt-10 mb-4">4. Indemnification</h2>
+      <p>
+        You agree to defend, indemnify, and hold harmless {site.name}, its developers, and affiliates from and against any and all claims, damages, obligations, losses, liabilities, costs, or debt, and expenses (including but not limited to attorney&apos;s fees) arising from: (a) your use of and access to the Applications or Site; (b) your violation of any term of these Terms; or (c) your violation of any third-party right or applicable law.
       </p>
 
       <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-50 mt-10 mb-4">5. Disclaimer of Warranties</h2>
-      <p>
-        Our website and applications are provided &quot;as is&quot; and &quot;as available,&quot; without warranty of any kind, either express or implied. {site.name} disclaims all warranties, including but not limited to the implied warranties of merchantability, fitness for a particular purpose, and non-infringement. We do not warrant that the applications will meet your requirements, operate without interruption, or be completely error-free.
+      <p className="font-semibold text-zinc-900 dark:text-zinc-50 uppercase tracking-wide text-xs">
+        THE FOLLOWING SECTION IS IMPORTANT. PLEASE READ IT CAREFULLY.
+      </p>
+      <p className="uppercase text-sm leading-relaxed text-zinc-700 dark:text-zinc-350 bg-zinc-100 dark:bg-zinc-900/50 p-4 rounded-xl border border-zinc-200 dark:border-zinc-800">
+        THE APPLICATIONS AND SITE ARE PROVIDED BY 403 STUDIO ON AN &quot;AS IS&quot; AND &quot;AS AVAILABLE&quot; BASIS, WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED. TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, 403 STUDIO DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT. WE DO NOT WARRANT THAT THE APPLICATIONS WILL MEET YOUR REQUIREMENTS, OPERATE WITHOUT INTERRUPTION, BE COMPLETELY SECURE, OR BE ENTIRELY FREE OF ERRORS OR BUG FIXES.
       </p>
 
       <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-50 mt-10 mb-4">6. Limitation of Liability</h2>
-      <p>
-        To the maximum extent permitted under applicable law, {site.name} and its developers shall not be liable for any direct, indirect, incidental, special, consequential, or punitive damages, including but not limited to loss of profits, loss of data, or other intangible losses resulting from your access to, use of, or inability to use our applications or website.
+      <p className="uppercase text-sm leading-relaxed text-zinc-700 dark:text-zinc-350 bg-zinc-100 dark:bg-zinc-900/50 p-4 rounded-xl border border-zinc-200 dark:border-zinc-800">
+        TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL 403 STUDIO, ITS DEVELOPERS, OR AFFILIATES BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, INCLUDING WITHOUT LIMITATION, LOSS OF PROFITS, LOSS OF DATA, LOSS OF USE, OR OTHER INTANGIBLE LOSSES, RESULTING FROM (A) YOUR ACCESS TO OR USE OF OR INABILITY TO ACCESS OR USE THE APPLICATIONS; (B) ANY FAILS OR ERRORS IN CALCULATIONS OR FLIGHT DATA; OR (C) ANY UNAUTHORIZED ACCESS OR SYSTEM INTERRUPTIONS. OUR TOTAL CUMULATIVE LIABILITY SHALL BE LIMITED TO THE GREATER OF $10.00 CAD OR THE AMOUNT YOU PAID FOR THE APPLICATION.
       </p>
 
-      <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-50 mt-10 mb-4">7. Governing Law & Jurisdiction</h2>
+      <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-50 mt-10 mb-4">7. Severability & Entire Agreement</h2>
       <p>
-        These Terms shall be governed by and construed in accordance with the laws of the Province of Alberta, Canada, without regard to its conflict of law principles. Any legal actions or proceedings arising under these Terms shall be brought exclusively in the courts located in Calgary, Alberta, Canada.
+        These Terms constitute the entire agreement between you and {site.name} regarding your use of our Site and Applications. If any provision of these Terms is deemed invalid or unenforceable by a court of competent jurisdiction, the remaining provisions of these Terms will remain in full force and effect.
       </p>
 
-      <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-50 mt-10 mb-4">8. Contact Information</h2>
+      <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-50 mt-10 mb-4">8. Governing Law & Venue</h2>
+      <p>
+        These Terms shall be governed by, and construed in accordance with, the laws of the Province of Alberta and the federal laws of Canada applicable therein, without regard to its conflict of law principles. Any legal suit, action, or proceeding arising out of or related to these Terms shall be instituted exclusively in the courts of Calgary, Alberta, Canada.
+      </p>
+
+      <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-50 mt-10 mb-4">9. Contact Support</h2>
       <p>
         If you have any questions or feedback regarding these Terms, please contact us at:{" "}
         <a href={`mailto:${site.email}`} className="text-blue-500 hover:underline">
