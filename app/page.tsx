@@ -67,11 +67,49 @@ export default function Home() {
     }
   };
 
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What platforms do you support?",
+        "acceptedAnswer": { "@type": "Answer", "text": "403 Studio currently builds exclusively for iPhone. By focusing on one platform, we can create faster, more polished experiences that feel right at home on iOS." }
+      },
+      {
+        "@type": "Question",
+        "name": "How much do your apps cost?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Our goal is simple: build great apps that are easy to enjoy. Some apps are free, while others may offer premium features or one-time upgrades. Pricing is always straightforward and clearly explained." }
+      },
+      {
+        "@type": "Question",
+        "name": "How often are your apps updated?",
+        "acceptedAnswer": { "@type": "Answer", "text": "We're constantly refining our apps with new features, performance improvements, bug fixes, and fresh content. Every update is an opportunity to make the experience even better." }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I request a feature?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Absolutely. Some of our best ideas come directly from our community. If there's something you'd like to see, we'd love to hear from you." }
+      },
+      {
+        "@type": "Question",
+        "name": "Why choose 403 Studio?",
+        "acceptedAnswer": { "@type": "Answer", "text": "We believe great apps should be simple, dependable, and enjoyable to use. Instead of building dozens of apps, we focus on creating products that are thoughtfully designed, regularly updated, and built to last." }
+      },
+      {
+        "@type": "Question",
+        "name": "What's next for 403 Studio?",
+        "acceptedAnswer": { "@type": "Answer", "text": "We're just getting started. From timeless games to practical everyday tools, we're building a growing collection of iPhone apps — with plenty more on the way." }
+      }
+    ]
+  };
+
   return (
     <div className="min-h-screen bg-zinc-50 dark:bg-zinc-950 text-zinc-900 dark:text-zinc-50 selection:bg-blue-500/30">
       <SiteNav />
       <JsonLd data={organizationSchema} />
       <JsonLd data={websiteSchema} />
+      <JsonLd data={faqSchema} />
 
       {/* ── Hero ── */}
       <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden px-6 pt-24 pb-16">
@@ -139,8 +177,8 @@ export default function Home() {
                   className={`group relative rounded-3xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800/80 p-6 md:p-8 flex flex-col justify-between overflow-hidden shadow-sm hover:shadow-2xl ${styles.glow} hover:border-zinc-300 dark:hover:border-zinc-700 transition-all duration-500 hover:-translate-y-1 h-full`}
                 >
                   <div className="relative z-10 flex flex-col h-full">
-                    {/* App Icon */}
-                    <div className="w-16 h-16 rounded-2xl overflow-hidden mb-6 border border-zinc-200/60 dark:border-zinc-800 shadow-sm">
+                    {/* App Icon — links to detail page */}
+                    <Link href={`/apps/${app.slug}`} className="w-16 h-16 rounded-2xl overflow-hidden mb-6 border border-zinc-200/60 dark:border-zinc-800 shadow-sm hover:scale-105 transition-transform duration-300 block shrink-0">
                       <Image
                         src={app.icon}
                         alt={`${app.name} app icon`}
@@ -148,7 +186,7 @@ export default function Home() {
                         height={64}
                         className="w-full h-full object-cover"
                       />
-                    </div>
+                    </Link>
 
                     <h3 className="text-xl font-bold mb-2 group-hover:text-zinc-900 dark:group-hover:text-white transition-colors">
                       {app.name}
@@ -159,15 +197,17 @@ export default function Home() {
 
                     {/* App Store Badge */}
                     <div className="mb-6 scale-90 origin-left">
-                      <AppStoreBadge />
+                      <AppStoreBadge href={app.appStoreUrl} />
                     </div>
 
-                    {/* App Preview Mockup (Interactive 3D Tilt) */}
+                    {/* App Preview Mockup (Interactive 3D Tilt) — links to detail page */}
+                    <Link href={`/apps/${app.slug}`} className="block">
                     <AppCardMockup
                       src={app.mockup}
                       alt={`${app.name} interface preview`}
                       glowColor={app.color}
                     />
+                    </Link>
 
                     <Link
                       href={`/apps/${app.slug}`}
@@ -443,7 +483,7 @@ export default function Home() {
             If there&apos;s anything else you&apos;d like to know, or if you want to request a feature, we&apos;d love to hear from you.
           </p>
           <a
-            href={`mailto:${site.email}`}
+            href={`mailto:${site.email}?subject=${encodeURIComponent("Hello from the 403 Studio website")}`}
             className="inline-block px-8 py-4 rounded-full bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 font-semibold shadow-lg hover:shadow-xl transition-all hover:-translate-y-1"
           >
             Email Us

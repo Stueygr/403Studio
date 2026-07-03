@@ -4,8 +4,21 @@ import Image from "next/image";
 import { useState } from "react";
 
 type Screenshot = { src: string; alt: string };
+type AccentColor = "blue" | "purple" | "pink";
 
-export function ScreenshotGallery({ screenshots }: { screenshots: readonly Screenshot[] }) {
+const accentBorder: Record<AccentColor, string> = {
+  blue: "border-blue-500 shadow-blue-500/20",
+  purple: "border-purple-500 shadow-purple-500/20",
+  pink: "border-pink-500 shadow-pink-500/20",
+};
+
+export function ScreenshotGallery({
+  screenshots,
+  color = "purple",
+}: {
+  screenshots: readonly Screenshot[];
+  color?: AccentColor;
+}) {
   const [active, setActive] = useState(0);
 
   return (
@@ -31,7 +44,7 @@ export function ScreenshotGallery({ screenshots }: { screenshots: readonly Scree
             onClick={() => setActive(i)}
             className={`relative shrink-0 w-14 h-[108px] rounded-lg overflow-hidden border-2 transition-all duration-200 ${
               i === active
-                ? "border-purple-500 shadow-lg shadow-purple-500/20 scale-105"
+                ? `${accentBorder[color]} shadow-lg scale-105`
                 : "border-zinc-300 dark:border-zinc-700 opacity-60 hover:opacity-100"
             }`}
           >

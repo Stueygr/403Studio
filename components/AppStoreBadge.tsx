@@ -1,8 +1,12 @@
 import React from "react";
 
-export function AppStoreBadge() {
-  return (
-    <div className="inline-flex items-center gap-3 bg-zinc-950 dark:bg-black text-white px-4 py-2 rounded-xl border border-zinc-800 hover:scale-[1.02] hover:border-zinc-700 transition-all select-none shadow-md">
+type Props = {
+  href?: string | null;
+};
+
+export function AppStoreBadge({ href }: Props) {
+  const inner = (
+    <>
       {/* Apple Logo SVG */}
       <svg
         viewBox="0 0 24 24"
@@ -14,12 +18,29 @@ export function AppStoreBadge() {
       {/* Badge Text */}
       <div className="flex flex-col items-start leading-none gap-0.5">
         <span className="text-[8px] font-bold uppercase tracking-widest text-zinc-400">
-          Coming soon to
+          {href ? "Download on the" : "Coming soon to"}
         </span>
-        <span className="text-xs font-semibold text-white">
-          App Store
-        </span>
+        <span className="text-xs font-semibold text-white">App Store</span>
       </div>
-    </div>
+    </>
   );
+
+  const baseClass =
+    "inline-flex items-center gap-3 bg-zinc-950 dark:bg-black text-white px-4 py-2 rounded-xl border border-zinc-800 hover:scale-[1.02] hover:border-zinc-700 transition-all select-none shadow-md";
+
+  if (href) {
+    return (
+      <a
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Download on the App Store"
+        className={baseClass}
+      >
+        {inner}
+      </a>
+    );
+  }
+
+  return <div className={baseClass}>{inner}</div>;
 }

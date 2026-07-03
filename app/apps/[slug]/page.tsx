@@ -33,6 +33,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     alternates: {
       canonical: `/apps/${slug}`,
     },
+    openGraph: {
+      title: `${app.name} — ${app.tagline}`,
+      description: app.description,
+      images: [{ url: app.icon, width: 512, height: 512, alt: `${app.name} app icon` }],
+    },
   };
 }
 
@@ -164,7 +169,7 @@ export default async function AppPage({ params }: Props) {
 
               <div className="rounded-2xl border border-zinc-200/85 dark:border-zinc-800 bg-zinc-100 dark:bg-zinc-900/50 p-6 md:p-8 flex flex-col sm:flex-row items-center justify-between gap-6">
                 <div className="flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left">
-                  <AppStoreBadge />
+                  <AppStoreBadge href={app.appStoreUrl} />
                   <div className="flex flex-col items-center sm:items-start">
                     <p className="text-xs text-zinc-500 dark:text-zinc-450 leading-relaxed max-w-xs mb-2">
                       Exclusively for iPhone. Securely synchronized via your own personal iCloud.
@@ -186,12 +191,23 @@ export default async function AppPage({ params }: Props) {
                     </div>
                   </div>
                 </div>
-                <a
-                  href={`mailto:${site.email}?subject=${encodeURIComponent(`${app.name} — notify me`)}`}
-                  className="whitespace-nowrap px-6 py-2.5 rounded-full bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 text-sm font-medium hover:scale-105 transition-transform shadow-md hover:shadow-lg"
-                >
-                  Notify me
-                </a>
+                {app.appStoreUrl ? (
+                  <a
+                    href={app.appStoreUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="whitespace-nowrap px-6 py-2.5 rounded-full bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 text-sm font-medium hover:scale-105 transition-transform shadow-md hover:shadow-lg"
+                  >
+                    Download
+                  </a>
+                ) : (
+                  <a
+                    href={`mailto:${site.email}?subject=${encodeURIComponent(`${app.name} — notify me`)}`}
+                    className="whitespace-nowrap px-6 py-2.5 rounded-full bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 text-sm font-medium hover:scale-105 transition-transform shadow-md hover:shadow-lg"
+                  >
+                    Notify me
+                  </a>
+                )}
               </div>
             </div>
 
@@ -205,7 +221,7 @@ export default async function AppPage({ params }: Props) {
               {/* Mockup Showcase Bezel */}
               <div className="relative rounded-3xl overflow-hidden border border-zinc-200/50 dark:border-zinc-800 bg-zinc-100/50 dark:bg-zinc-900/50 backdrop-blur-md p-3 shadow-2xl">
                 {"screenshots" in app && app.screenshots ? (
-                  <ScreenshotGallery screenshots={app.screenshots} />
+                  <ScreenshotGallery screenshots={app.screenshots} color={app.color} />
                 ) : (
                   <div className="relative aspect-square w-full rounded-2xl overflow-hidden border border-zinc-200/60 dark:border-zinc-800 bg-zinc-950">
                     <Image

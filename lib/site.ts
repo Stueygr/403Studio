@@ -17,6 +17,7 @@ export const apps = [
     color: "blue" as const,
     icon: "/icon_pilot.png",
     mockup: "/pilot_logbook_ui.png",
+    appStoreUrl: null,
     features: [
       "Offline Flight & Duty Logging: Track block, air, and duty times on the go",
       "CARs 700.15 & 700.16 Compliance: Built-in limit monitoring and rest period tracking",
@@ -35,6 +36,7 @@ export const apps = [
     color: "purple" as const,
     icon: "/icon_gamevault.png",
     mockup: "/game_vault_mockup.png",
+    appStoreUrl: null,
     screenshots: [
       { src: "/gv_home.jpg", alt: "Game Vault home screen with daily challenges and game rooms" },
       { src: "/gv_games.jpg", alt: "Puzzle and arcade game rooms with Sudoku, Snake, and more" },
@@ -81,6 +83,7 @@ export const apps = [
     color: "pink" as const,
     icon: "/icon_cyberpunk.png",
     mockup: "/vegas_cyberpunk_mockup.png",
+    appStoreUrl: null,
     screenshots: [
       { src: "/vcm_home.jpg", alt: "Vegas Cyberpunk Midnight home screen with all casino games" },
       { src: "/vcm_plinko.jpg", alt: "Plinko game with neon cyan aesthetics and multiplier slots" },
