@@ -38,8 +38,6 @@ export const apps = [
     mockup: "/game_vault_mockup.png",
     appStoreUrl: null,
     screenshots: [
-      { src: "/gv_home.jpg", alt: "Game Vault home screen with daily challenges and game rooms" },
-      { src: "/gv_games.jpg", alt: "Puzzle and arcade game rooms with Sudoku, Snake, and more" },
       { src: "/gv_tictactoe.jpg", alt: "Tic-Tac-Toe game setup with AI opponents" },
       { src: "/gv_vault_smash.jpg", alt: "Vault Smash brick breaker gameplay" },
       { src: "/gv_achievements.jpg", alt: "Achievements system with combat, streaks, and game mastery" },
