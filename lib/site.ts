@@ -38,9 +38,9 @@ export const apps = [
     mockup: "/game_vault_mockup.png",
     appStoreUrl: null,
     screenshots: [
-      { src: "/gv_tictactoe.jpg", alt: "Tic-Tac-Toe game setup with AI opponents" },
-      { src: "/gv_vault_smash.jpg", alt: "Vault Smash brick breaker gameplay" },
-      { src: "/gv_achievements.jpg", alt: "Achievements system with combat, streaks, and game mastery" },
+      { src: "/gv_home.png", alt: "Game Vault dashboard showing player level, XP, achievements, and stats" },
+      { src: "/gv_strategy_room.png", alt: "Strategy Room showing classic board games like Chess, Checkers, and Tic-Tac-Toe" },
+      { src: "/gv_arcade_room.png", alt: "Arcade and Word Rooms showing offline action and word games like Snake, Memory Match, and Hangman" },
     ],
     features: [
       "Chess, checkers, tic-tac-toe, sudoku & more",
