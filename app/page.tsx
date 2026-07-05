@@ -209,12 +209,30 @@ export default function Home() {
                     />
                     </Link>
 
-                    <Link
-                      href={`/apps/${app.slug}`}
-                      className={`self-start text-sm font-semibold flex items-center gap-2 group-hover:translate-x-1 transition-transform ${styles.link}`}
-                    >
-                      Learn more <span aria-hidden="true">&rarr;</span>
-                    </Link>
+                    <div className="flex items-center gap-3 mt-auto">
+                      <Link
+                        href={`/apps/${app.slug}`}
+                        className={`text-sm font-semibold flex items-center gap-2 group-hover:translate-x-1 transition-transform ${styles.link}`}
+                      >
+                        Learn more <span aria-hidden="true">&rarr;</span>
+                      </Link>
+                      {"websiteUrl" in app && app.websiteUrl && "websiteLabel" in app && app.websiteLabel && (
+                        <>
+                          <span className="text-zinc-300 dark:text-zinc-700 select-none">|</span>
+                          <a
+                            href={app.websiteUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-sm font-semibold text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100 flex items-center gap-1 transition-colors relative z-20"
+                          >
+                            {app.websiteLabel}
+                            <svg className="w-3 h-3 shrink-0 opacity-70" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
+                              <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+                            </svg>
+                          </a>
+                        </>
+                      )}
+                    </div>
                   </div>
                 </div>
               </ScrollReveal>

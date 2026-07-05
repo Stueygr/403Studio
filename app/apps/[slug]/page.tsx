@@ -130,7 +130,23 @@ export default async function AppPage({ params }: Props) {
                   <h1 className="text-4xl md:text-5xl font-bold tracking-tight">{app.name}</h1>
                 </div>
                 <p className="text-xl font-medium text-zinc-650 dark:text-zinc-300 mb-6">{app.tagline}</p>
-                <p className="text-base text-zinc-600 dark:text-zinc-400 leading-relaxed">{app.description}</p>
+                <p className="text-base text-zinc-600 dark:text-zinc-400 leading-relaxed mb-6">{app.description}</p>
+                {"websiteUrl" in app && app.websiteUrl && "websiteLabel" in app && app.websiteLabel && (
+                  <div className="mb-6">
+                    <a
+                      href={app.websiteUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 text-sm font-semibold hover:border-zinc-300 dark:hover:border-zinc-700 transition-all hover:shadow-sm ${accent.text}`}
+                    >
+                      <svg className="w-4 h-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-.778.099-1.533.284-2.253" />
+                      </svg>
+                      Visit {app.websiteLabel}
+                      <span aria-hidden="true" className="opacity-70">&rarr;</span>
+                    </a>
+                  </div>
+                )}
               </div>
 
               <h2 className="text-xl font-bold mb-6 tracking-tight">Key Capabilities</h2>

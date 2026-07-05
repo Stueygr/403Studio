@@ -18,6 +18,8 @@ export const apps = [
     icon: "/icon_pilot.png",
     mockup: "/pilot_logbook_ui.png",
     appStoreUrl: null,
+    websiteUrl: "https://pilotlogbook.ca",
+    websiteLabel: "PilotLogbook.ca",
     features: [
       "Offline Flight & Duty Logging: Track block, air, and duty times on the go",
       "CARs 700.15 & 700.16 Compliance: Built-in limit monitoring and rest period tracking",
