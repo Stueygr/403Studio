@@ -40,7 +40,7 @@ export const apps = [
     mockup: "/game_vault_mockup.png",
     appStoreUrl: null,
     screenshots: [
-      { src: "/gv_strategy_room.png", alt: "Strategy Room showing classic board games like Chess, Checkers, and Tic-Tac-Toe" },
+      { src: "/gv_vault_smash.jpg", alt: "Vault Smash game showing brick breaker style gameplay" },
     ],
     features: [
       "Chess, checkers, tic-tac-toe, sudoku & more",
