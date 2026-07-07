@@ -15,7 +15,7 @@ export const apps = [
     description:
       "A comprehensive flight logger and duty tracker that works entirely offline, built specifically to ensure seamless compliance with Canadian Aviation Regulations (CARs).",
     color: "blue" as const,
-    icon: "/icon_pilot.png",
+    icon: "/icon_pilot.jpg",
     mockup: "/pilot_logbook_ui.png",
     appStoreUrl: null,
     websiteUrl: "https://pilotlogbook.ca",
