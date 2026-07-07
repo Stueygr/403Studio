@@ -16,6 +16,7 @@ export const apps = [
       "A comprehensive flight logger and duty tracker that works entirely offline, built specifically to ensure seamless compliance with Canadian Aviation Regulations (CARs).",
     color: "blue" as const,
     icon: "/icon_pilot.jpg",
+    iconDark: "/icon_pilot_dark.jpg",
     mockup: "/pilot_logbook_ui.png",
     appStoreUrl: null,
     websiteUrl: "https://pilotlogbook.ca",
@@ -37,6 +38,7 @@ export const apps = [
       "Chess, checkers, tic-tac-toe, sudoku, and so many more classic games, all built for offline play. Perfect for long flights, subway commutes, or anywhere you lose signal. Just the timeless games you grew up with.",
     color: "purple" as const,
     icon: "/icon_gamevault.png",
+    iconDark: null,
     mockup: "/game_vault_mockup.png",
     appStoreUrl: null,
     screenshots: [
@@ -80,6 +82,7 @@ export const apps = [
       "A neon-drenched casino simulator packed with the classics — blackjack, roulette, plinko, slots, video poker, and baccarat. Built entirely for offline enjoyment with zero real money. Currently in active development.",
     color: "pink" as const,
     icon: "/icon_cyberpunk.png",
+    iconDark: null,
     mockup: "/vegas_cyberpunk_mockup.png",
     appStoreUrl: null,
     screenshots: [

@@ -184,8 +184,17 @@ export default function Home() {
                         alt={`${app.name} app icon`}
                         width={64}
                         height={64}
-                        className="w-full h-full object-cover"
+                        className={`w-full h-full object-cover ${app.iconDark ? "dark:hidden" : ""}`}
                       />
+                      {app.iconDark && (
+                        <Image
+                          src={app.iconDark}
+                          alt={`${app.name} app icon (dark)`}
+                          width={64}
+                          height={64}
+                          className="w-full h-full object-cover hidden dark:block"
+                        />
+                      )}
                     </Link>
 
                     <h3 className="text-xl font-bold mb-2 group-hover:text-zinc-900 dark:group-hover:text-white transition-colors">

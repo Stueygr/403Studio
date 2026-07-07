@@ -124,8 +124,17 @@ export default async function AppPage({ params }: Props) {
                       alt={`${app.name} app icon`}
                       width={56}
                       height={56}
-                      className="w-full h-full object-cover"
+                      className={`w-full h-full object-cover ${app.iconDark ? "dark:hidden" : ""}`}
                     />
+                    {app.iconDark && (
+                      <Image
+                        src={app.iconDark}
+                        alt={`${app.name} app icon (dark)`}
+                        width={56}
+                        height={56}
+                        className="w-full h-full object-cover hidden dark:block"
+                      />
+                    )}
                   </div>
                   <h1 className="text-4xl md:text-5xl font-bold tracking-tight">{app.name}</h1>
                 </div>
