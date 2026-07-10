@@ -35,7 +35,7 @@ export default function PilotLogbookTermsPage() {
 
       <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-50 mt-10 mb-4">3. Cloud Synchronization & Data Security</h2>
       <p>
-        Pilot Logbook synchronizes your flight logs to our website database. While we implement secure storage practices, you are responsible for maintaining your account credentials securely. {site.name} is not responsible for data loss resulting from unauthorized account access or credential sharing.
+        Pilot Logbook synchronizes your flight logs to our Supabase database. While we implement secure storage practices, you can access your data via PC or iOS using your own credentials (which we do not have access to). You are responsible for maintaining your account credentials securely. {site.name} is not responsible for data loss resulting from unauthorized account access or credential sharing.
       </p>
 
       <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-50 mt-10 mb-4">4. Disclaimer of Warranties</h2>

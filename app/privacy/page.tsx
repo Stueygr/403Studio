@@ -33,10 +33,14 @@ export default function PrivacyPage() {
         <li><strong>No Crash Analytics Sharing:</strong> Crash reporting is managed exclusively via the native, opt-in Apple diagnostics framework. We do not utilize third-party crash reporting databases.</li>
       </ul>
 
-      <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-50 mt-10 mb-4">2. Storage and Server Infrastructure</h2>
+      <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-50 mt-10 mb-4">2. Sandboxed Local Storage & Cloud Syncing</h2>
       <p>
-        Depending on the specific Application, your configurations, game achievements, logs, and duty data may be stored locally in the secure sandboxed storage of your physical device or securely synchronized directly to our website servers. For applications that operate locally, we run zero server-side databases, leaving your files under your own custody.
+        All inputs, configurations, game achievements, logs, and duty data created inside our Applications are stored locally in the secure sandboxed storage of your physical device. Depending on the Application:
       </p>
+      <ul className="list-disc pl-6 space-y-2 text-zinc-650 dark:text-zinc-400">
+        <li><strong>Local & iCloud Sync Apps:</strong> For our offline games and casino simulators, we run zero server-side databases. Your data is stored on your device and, if enabled, synced only via your personal Apple iCloud account and Apple services, which we have no access to.</li>
+        <li><strong>Pilot Logbook App:</strong> Your flight log entries, duty times, and calculations are securely backed up on our Supabase server. This data can be accessed via PC or on your iOS devices using your own secure credentials, which we do not have access to.</li>
+      </ul>
 
       <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-50 mt-10 mb-4">3. Device Permission Disclosures</h2>
       <p>

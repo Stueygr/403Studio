@@ -22,12 +22,12 @@ export default function PilotLogbookPrivacyPage() {
 
       <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-50 mt-10 mb-4">1. Flight Data & Privacy</h2>
       <p>
-        Pilot Logbook allows you to log flight entries, block times, air times, landing counts, night calculations, and duty tracking parameters. Your logbook entries are securely synced directly to our website servers so you can access your records across your devices. We will never share, sell, or monetize your flight logs.
+        Pilot Logbook allows you to log flight entries, block times, air times, landing counts, night calculations, and duty tracking parameters. Your flight logs are securely backed up on our Supabase server and can be accessed by PC or on your iOS device using your own credentials—which we do not have access to. We will never share, sell, or monetize your flight logs.
       </p>
 
       <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-50 mt-10 mb-4">2. Cloud Synchronization & Accounts</h2>
       <p>
-        By signing into your Pilot Logbook account on your iPhone or iPad, your logbook data is synchronized securely with our website database. This ensures your logs are backed up and accessible from any supported browser or device.
+        By signing into your Pilot Logbook account on your iPhone or iPad, your logbook data is synchronized securely with our website database. This ensures your logs are backed up and accessible from any supported browser on PC or iOS devices.
       </p>
 
       <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-50 mt-10 mb-4">3. Device Permissions & SDKs</h2>
