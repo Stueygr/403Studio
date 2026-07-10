@@ -25,13 +25,11 @@ export const apps = [
     features: [
       "Flight & Duty Logging: Track block, air, and duty times on the go",
       "CARs 700.15 & 700.16 Compliance: Built-in limit monitoring and duty tracking",
-      "Automatic Night Calculations: Instant flight time distribution based on solar coordinates",
       "Export Logs: Export logs to PDF and CSV formats ready for audits",
       "Scan Your Logbook: Upload paper logbooks with ease",
       "Route Map & Stats: Interactive route mapping and most common routes tracker",
       "Customizable Dashboard: Easy-to-use logbook entry that syncs to our website from your iPhone/iPad",
       "Fleet Manager: Track aircraft details and most common types flown",
-      "Currency Tracking: Monitor takeoff, landing, and instrument currency",
       "Document Expiry Tracker: Receive alerts for license, rating, and medical renewals",
       "Custom Log Fields: Tailor your entries to track specific flight or training hours",
       "100% Offline Capable: Designed for flight decks with zero cellular dependency",
