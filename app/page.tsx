@@ -217,24 +217,14 @@ export default function Home() {
                       <AppStoreBadge href={app.appStoreUrl} betaUrl={"betaUrl" in app ? app.betaUrl : null} />
                     </div>
 
-                    {/* App Preview Mockup (Interactive 3D Tilt) — links to TestFlight if beta, else details page */}
-                    {"betaUrl" in app && app.betaUrl ? (
-                      <a href={app.betaUrl} target="_blank" rel="noopener noreferrer" className="block cursor-pointer">
-                        <AppCardMockup
-                          src={app.mockup}
-                          alt={`${app.name} interface preview`}
-                          glowColor={app.color}
-                        />
-                      </a>
-                    ) : (
-                      <Link href={`/apps/${app.slug}`} className="block">
-                        <AppCardMockup
-                          src={app.mockup}
-                          alt={`${app.name} interface preview`}
-                          glowColor={app.color}
-                        />
-                      </Link>
-                    )}
+                    {/* App Preview Mockup (Interactive 3D Tilt) — links to detail page */}
+                    <Link href={`/apps/${app.slug}`} className="block">
+                      <AppCardMockup
+                        src={app.mockup}
+                        alt={`${app.name} interface preview`}
+                        glowColor={app.color}
+                      />
+                    </Link>
 
                     <div className="flex items-center gap-3 mt-auto">
                       <Link

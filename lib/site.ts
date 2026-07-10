@@ -47,7 +47,7 @@ export const apps = [
     iconDark: null,
     mockup: "/game_vault_mockup.png",
     appStoreUrl: null,
-    betaUrl: "https://testflight.apple.com/join/xxxxxx", // placeholder - replace with actual TestFlight link
+    betaUrl: "https://testflight.apple.com/join/zbA8DNVM",
     syncDescription: "Exclusively for iPhone. Securely synchronized via your own personal iCloud.",
     screenshots: [
       { src: "/gv_vault_smash.jpg", alt: "Vault Smash game showing brick breaker style gameplay" },
