@@ -63,7 +63,7 @@ export const apps = [
       "Dots & Boxes",
       "Sudoku",
       "Minesweeper",
-      "2048",
+      "Vault 2048",
       "15 Puzzle",
       "Vault Solitaire",
       "Snake",
