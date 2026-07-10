@@ -32,7 +32,7 @@ export const apps = [
   },
   {
     slug: "game-vault",
-    name: "Game Vault - No wifi Games",
+    name: "Game Vault - No Wi-Fi Games",
     tagline: "All the games you know and love — no Wi-Fi needed.",
     description:
       "Chess, checkers, tic-tac-toe, sudoku, and so many more classic games, all built for offline play. Perfect for long flights, subway commutes, or anywhere you lose signal. Just the timeless games you grew up with.",
