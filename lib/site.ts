@@ -17,7 +17,7 @@ export const apps = [
     color: "blue" as const,
     icon: "/icon_pilot.jpg",
     iconDark: "/icon_pilot_dark.jpg",
-    mockup: "/pilot_logbook_ui.png",
+    mockup: "/pilot_logbook_ui_v2.png",
     appStoreUrl: null,
     websiteUrl: "https://pilotlogbook.ca",
     websiteLabel: "PilotLogbook.ca",
