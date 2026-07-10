@@ -33,9 +33,9 @@ export default function PrivacyPage() {
         <li><strong>No Crash Analytics Sharing:</strong> Crash reporting is managed exclusively via the native, opt-in Apple diagnostics framework. We do not utilize third-party crash reporting databases.</li>
       </ul>
 
-      <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-50 mt-10 mb-4">2. Sandboxed Local Storage</h2>
+      <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-50 mt-10 mb-4">2. Storage and Server Infrastructure</h2>
       <p>
-        All inputs, configurations, game achievements, logs, and duty data created inside our Applications are stored locally in the secure sandboxed storage of your physical device. We run zero server-side databases. Your files are fully under your own custody and are inaccessible to {site.name} or any third parties unless you manually choose to export them.
+        Depending on the specific Application, your configurations, game achievements, logs, and duty data may be stored locally in the secure sandboxed storage of your physical device or securely synchronized directly to our website servers. For applications that operate locally, we run zero server-side databases, leaving your files under your own custody.
       </p>
 
       <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-50 mt-10 mb-4">3. Device Permission Disclosures</h2>
@@ -49,12 +49,9 @@ export default function PrivacyPage() {
         <li>Device Bluetooth or local network scanning (except standard system hooks).</li>
       </ul>
 
-      <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-50 mt-10 mb-4">4. Apple iCloud Syncing</h2>
+      <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-50 mt-10 mb-4">4. Data Synchronization</h2>
       <p>
-        If you opt to use synchronization features inside the Applications, your data is synced directly and securely with Apple&apos;s CloudKit servers using your personal Apple ID credentials.
-      </p>
-      <p>
-        This transmission occurs directly between your device and Apple. {site.name} has no access to your iCloud account, your credentials, or the synced files, and Apple acts as the sole data processor for this transmission.
+        Depending on the Application, synchronization features may sync your data directly and securely with Apple&apos;s CloudKit servers (using your personal Apple ID credentials) or with our secure website database (using your user credentials). 
       </p>
 
       <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-50 mt-10 mb-4">5. Website Logs & Cookies</h2>

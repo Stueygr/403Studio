@@ -33,9 +33,9 @@ export default function PilotLogbookTermsPage() {
         You are solely responsible for manually verifying the correctness of all flight parameters, block hours, night calculations, and rest compliance limits against official Canadian Aviation Regulations (CARs) or relevant local guidelines. {site.name} is not liable for duty exceedances, licensing issues, or administrative enforcement resulting from the use of this app.
       </p>
 
-      <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-50 mt-10 mb-4">3. Local Data Backup Responsibility</h2>
+      <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-50 mt-10 mb-4">3. Cloud Synchronization & Data Security</h2>
       <p>
-        Pilot Logbook stores its data locally on your device. We do not operate cloud databases and cannot recover lost flight logs, duty histories, or custom entries. You are responsible for keeping local device backups or syncing via Apple iCloud.
+        Pilot Logbook synchronizes your flight logs to our website database. While we implement secure storage practices, you are responsible for maintaining your account credentials securely. {site.name} is not responsible for data loss resulting from unauthorized account access or credential sharing.
       </p>
 
       <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-50 mt-10 mb-4">4. Disclaimer of Warranties</h2>

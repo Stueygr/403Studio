@@ -36,9 +36,9 @@ export default function TermsPage() {
         All rights, titles, and interests in and to the Site and Applications—including all source code, graphic designs, mockups, vector artwork, logos, icons, trademarks, and text elements—are and shall remain the exclusive intellectual property of {site.name}. These properties are protected by Canadian and international copyright, trademark, and intellectual property laws.
       </p>
 
-      <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-50 mt-10 mb-4">3. Local Data Responsibility</h2>
+      <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-50 mt-10 mb-4">3. Data Storage & Sync Responsibility</h2>
       <p>
-        Because our Applications run locally and do not store your data on our own cloud infrastructure, you are solely responsible for maintaining secure backups of your device files and configurations. {site.name} is not responsible for data loss resulting from application deletion, device failures, or iCloud sync interruptions.
+        Depending on the specific Application, your data may be stored locally (with optional iCloud synchronization) or synced directly to our secure website servers. You are responsible for maintaining device backups or secure account credentials. {site.name} is not responsible for data loss resulting from device failures, application deletions, or credential sharing.
       </p>
 
       <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-50 mt-10 mb-4">4. Indemnification</h2>

@@ -22,12 +22,12 @@ export default function PilotLogbookPrivacyPage() {
 
       <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-50 mt-10 mb-4">1. Flight Data & Privacy</h2>
       <p>
-        Pilot Logbook operates entirely locally on your iPhone. Your logged flight entries, block times, air times, landing counts, night calculations, and duty tracking parameters are stored directly inside your device&apos;s sandboxed local database. We do not operate third-party databases, and we never collect, store, share, or sell your flight logs.
+        Pilot Logbook allows you to log flight entries, block times, air times, landing counts, night calculations, and duty tracking parameters. Your logbook entries are securely synced directly to our website servers so you can access your records across your devices. We will never share, sell, or monetize your flight logs.
       </p>
 
-      <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-50 mt-10 mb-4">2. Apple iCloud Synchronization</h2>
+      <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-50 mt-10 mb-4">2. Cloud Synchronization & Accounts</h2>
       <p>
-        If you enable iCloud sync inside the app, your flight logs and duty stats are synced directly and securely with Apple&apos;s CloudKit servers using your personal Apple ID credentials. {site.name} has no access to your iCloud account, your flight data, or your login credentials.
+        By signing into your Pilot Logbook account on your iPhone or iPad, your logbook data is synchronized securely with our website database. This ensures your logs are backed up and accessible from any supported browser or device.
       </p>
 
       <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-50 mt-10 mb-4">3. Device Permissions & SDKs</h2>
@@ -37,7 +37,7 @@ export default function PilotLogbookPrivacyPage() {
 
       <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-50 mt-10 mb-4">4. GDPR & CCPA Rights</h2>
       <p>
-        Because we do not store, transfer, or process user data on our own servers, your regulatory rights under GDPR or CCPA (access, export, modify, or erase your data) are fully under your own control. You can delete all local records simply by deleting the app or purging your local iCloud app storage.
+        You have full control over your data. You can access, export, modify, or delete your account and all associated flight logs at any time directly through the app settings or by logging into your profile on our website.
       </p>
 
       <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-50 mt-10 mb-4">5. Contact Information</h2>

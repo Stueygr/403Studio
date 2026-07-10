@@ -197,7 +197,7 @@ export default async function AppPage({ params }: Props) {
                   <AppStoreBadge href={app.appStoreUrl} />
                   <div className="flex flex-col items-center sm:items-start">
                     <p className="text-xs text-zinc-500 dark:text-zinc-450 leading-relaxed max-w-xs mb-2">
-                      Exclusively for iPhone. Securely synchronized via your own personal iCloud.
+                      {app.syncDescription}
                     </p>
                     <div className="flex gap-3 text-[10px] sm:text-xs text-zinc-450 dark:text-zinc-550 font-medium">
                       <Link
