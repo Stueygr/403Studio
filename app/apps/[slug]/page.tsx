@@ -194,8 +194,14 @@ export default async function AppPage({ params }: Props) {
 
               <div className="rounded-2xl border border-zinc-200/85 dark:border-zinc-800 bg-zinc-100 dark:bg-zinc-900/50 p-6 md:p-8 flex flex-col sm:flex-row items-center justify-between gap-6">
                 <div className="flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left">
-                  <AppStoreBadge href={app.appStoreUrl} />
+                  <AppStoreBadge href={app.appStoreUrl} betaUrl={"betaUrl" in app ? app.betaUrl : null} />
                   <div className="flex flex-col items-center sm:items-start">
+                    {"betaUrl" in app && app.betaUrl && !app.appStoreUrl && (
+                      <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-semibold bg-purple-500/10 text-purple-500 border border-purple-500/20 mb-2">
+                        <span className="w-1.5 h-1.5 rounded-full bg-purple-500 animate-pulse" />
+                        Open Beta Now Available
+                      </span>
+                    )}
                     <p className="text-xs text-zinc-500 dark:text-zinc-450 leading-relaxed max-w-xs mb-2">
                       {app.syncDescription}
                     </p>
@@ -225,6 +231,15 @@ export default async function AppPage({ params }: Props) {
                   >
                     Download
                   </a>
+                ) : "betaUrl" in app && app.betaUrl ? (
+                  <a
+                    href={app.betaUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="whitespace-nowrap px-6 py-2.5 rounded-full bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 text-sm font-medium hover:scale-105 transition-transform shadow-md hover:shadow-lg"
+                  >
+                    Join Open Beta
+                  </a>
                 ) : (
                   <a
                     href={`mailto:${site.email}?subject=${encodeURIComponent(`${app.name} — notify me`)}`}
@@ -245,20 +260,29 @@ export default async function AppPage({ params }: Props) {
 
               {/* Mockup Showcase Bezel */}
               <div className="relative rounded-3xl overflow-hidden border border-zinc-200/50 dark:border-zinc-800 bg-zinc-100/50 dark:bg-zinc-900/50 backdrop-blur-md p-3 shadow-2xl">
-                {"screenshots" in app && app.screenshots ? (
-                  <ScreenshotGallery screenshots={app.screenshots} color={app.color} />
-                ) : (
-                  <div className="relative aspect-square w-full rounded-2xl overflow-hidden border border-zinc-200/60 dark:border-zinc-800 bg-zinc-950">
-                    <Image
-                      src={app.mockup}
-                      alt={`${app.name} High-Fidelity UI Interface Screenshot`}
-                      fill
-                      priority
-                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 40vw, 30vw"
-                      className="object-cover object-top select-none group-hover:scale-102 transition-transform duration-700"
-                    />
-                  </div>
-                )}
+                {(() => {
+                  const content = "screenshots" in app && app.screenshots ? (
+                    <ScreenshotGallery screenshots={app.screenshots} color={app.color} />
+                  ) : (
+                    <div className="relative aspect-square w-full rounded-2xl overflow-hidden border border-zinc-200/60 dark:border-zinc-800 bg-zinc-950">
+                      <Image
+                        src={app.mockup}
+                        alt={`${app.name} High-Fidelity UI Interface Screenshot`}
+                        fill
+                        priority
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 40vw, 30vw"
+                        className="object-cover object-top select-none group-hover:scale-102 transition-transform duration-700"
+                      />
+                    </div>
+                  );
+                  return "betaUrl" in app && app.betaUrl ? (
+                    <a href={app.betaUrl} target="_blank" rel="noopener noreferrer" className="block cursor-pointer">
+                      {content}
+                    </a>
+                  ) : (
+                    content
+                  );
+                })()}
               </div>
             </div>
           </div>

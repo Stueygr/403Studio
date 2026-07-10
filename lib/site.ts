@@ -19,6 +19,7 @@ export const apps = [
     iconDark: "/icon_pilot_dark.jpg",
     mockup: "/pilot_logbook_ui_v2.png",
     appStoreUrl: null,
+    betaUrl: null,
     websiteUrl: "https://pilotlogbook.ca",
     websiteLabel: "PilotLogbook.ca",
     syncDescription: "Exclusively for iPhone & iPad. Securely synchronized directly to our website.",
@@ -46,6 +47,7 @@ export const apps = [
     iconDark: null,
     mockup: "/game_vault_mockup.png",
     appStoreUrl: null,
+    betaUrl: "https://testflight.apple.com/join/xxxxxx", // placeholder - replace with actual TestFlight link
     syncDescription: "Exclusively for iPhone. Securely synchronized via your own personal iCloud.",
     screenshots: [
       { src: "/gv_vault_smash.jpg", alt: "Vault Smash game showing brick breaker style gameplay" },
@@ -90,6 +92,7 @@ export const apps = [
     iconDark: null,
     mockup: "/vegas_cyberpunk_mockup.png",
     appStoreUrl: null,
+    betaUrl: null,
     syncDescription: "Exclusively for iPhone. Securely synchronized via your own personal iCloud.",
     screenshots: [
       { src: "/vcm_home.jpg", alt: "Vegas Cyberpunk Midnight home screen with all casino games" },

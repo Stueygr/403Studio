@@ -197,26 +197,44 @@ export default function Home() {
                       )}
                     </Link>
 
-                    <h3 className="text-xl font-bold mb-2 group-hover:text-zinc-900 dark:group-hover:text-white transition-colors">
-                      {app.name}
-                    </h3>
-                    <p className="text-zinc-600 dark:text-zinc-400 text-sm leading-relaxed mb-4 flex-grow">
+                    <div className="flex items-center gap-2.5 mb-2 flex-wrap">
+                      <h3 className="text-xl font-bold group-hover:text-zinc-900 dark:group-hover:text-white transition-colors">
+                        {app.name}
+                      </h3>
+                      {"betaUrl" in app && app.betaUrl && !app.appStoreUrl && (
+                        <span className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full text-[10px] font-semibold bg-purple-500/10 text-purple-500 border border-purple-500/20">
+                          <span className="w-1 h-1 rounded-full bg-purple-500 animate-pulse" />
+                          Beta
+                        </span>
+                      )}
+                    </div>
+                    <p className="text-zinc-650 dark:text-zinc-450 text-sm leading-relaxed mb-4 flex-grow">
                       {app.description}
                     </p>
 
                     {/* App Store Badge */}
                     <div className="mb-6 scale-90 origin-left">
-                      <AppStoreBadge href={app.appStoreUrl} />
+                      <AppStoreBadge href={app.appStoreUrl} betaUrl={"betaUrl" in app ? app.betaUrl : null} />
                     </div>
 
-                    {/* App Preview Mockup (Interactive 3D Tilt) — links to detail page */}
-                    <Link href={`/apps/${app.slug}`} className="block">
-                    <AppCardMockup
-                      src={app.mockup}
-                      alt={`${app.name} interface preview`}
-                      glowColor={app.color}
-                    />
-                    </Link>
+                    {/* App Preview Mockup (Interactive 3D Tilt) — links to TestFlight if beta, else details page */}
+                    {"betaUrl" in app && app.betaUrl ? (
+                      <a href={app.betaUrl} target="_blank" rel="noopener noreferrer" className="block cursor-pointer">
+                        <AppCardMockup
+                          src={app.mockup}
+                          alt={`${app.name} interface preview`}
+                          glowColor={app.color}
+                        />
+                      </a>
+                    ) : (
+                      <Link href={`/apps/${app.slug}`} className="block">
+                        <AppCardMockup
+                          src={app.mockup}
+                          alt={`${app.name} interface preview`}
+                          glowColor={app.color}
+                        />
+                      </Link>
+                    )}
 
                     <div className="flex items-center gap-3 mt-auto">
                       <Link
