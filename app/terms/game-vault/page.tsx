@@ -25,9 +25,9 @@ export default function GameVaultTermsPage() {
         {site.name} grants you a personal, non-exclusive, non-transferable, and revocable license to run Game Vault on your personal iPhone devices for entertainment and offline play purposes only, in accordance with these Terms and Apple App Store rules.
       </p>
 
-      <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-50 mt-10 mb-4">2. Local Data Backup Responsibility</h2>
+      <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-50 mt-10 mb-4">2. iCloud Synchronization & Backup</h2>
       <p>
-        Game Vault stores its game files, records, levels, scores, and preferences locally on your device. We do not operate cloud backends and cannot recover lost data, scores, or achievements. You are responsible for keeping local device backups or syncing via Apple iCloud.
+        Game Vault syncs data via iCloud to save progress between devices. We do not operate cloud backends and cannot recover lost data, scores, or achievements. You are responsible for keeping local device backups or syncing via Apple iCloud.
       </p>
 
       <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-50 mt-10 mb-4">3. Disclaimer of Warranties</h2>
