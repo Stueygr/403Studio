@@ -14,7 +14,7 @@ export default function GameVaultTermsPage() {
   return (
     <LegalLayout title="Terms of Service — Game Vault">
       <p>
-        <strong>Last updated:</strong> June 30, 2026
+        <strong>Last updated:</strong> July 10, 2026
       </p>
       <p>
         These Terms of Service govern your use of the Game Vault application (the &quot;App&quot;). By installing or using Game Vault, you agree to these Terms. If you do not agree, please do not use the App.
@@ -30,7 +30,12 @@ export default function GameVaultTermsPage() {
         Game Vault syncs data via iCloud to save progress between devices. We do not operate cloud backends and cannot recover lost data, scores, or achievements. You are responsible for keeping local device backups or syncing via Apple iCloud.
       </p>
 
-      <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-50 mt-10 mb-4">3. Disclaimer of Warranties</h2>
+      <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-50 mt-10 mb-4">3. Third-Party Advertisements</h2>
+      <p>
+        The free version of Game Vault displays third-party advertisements served by Google AdMob. By using the App, you acknowledge that you may interact with ad content served by third parties. {site.name} does not control, endorse, or assume responsibility for the availability, content, products, or services promoted in these advertisements.
+      </p>
+
+      <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-50 mt-10 mb-4">4. Disclaimer of Warranties</h2>
       <p className="font-semibold text-zinc-900 dark:text-zinc-50 uppercase tracking-wide text-xs">
         THE FOLLOWING SECTION IS IMPORTANT. PLEASE READ IT CAREFULLY.
       </p>
@@ -38,17 +43,17 @@ export default function GameVaultTermsPage() {
         GAME VAULT IS PROVIDED &quot;AS IS&quot; AND &quot;AS AVAILABLE,&quot; WITHOUT WARRANTY OF ANY KIND. TO THE MAXIMUM EXTENT PERMITTED BY LAW, 403 STUDIO DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT. WE DO NOT WARRANT THAT THE APP WILL BE FREE FROM BUGS, ERRORS, OR SYSTEM INTERRUPTIONS.
       </p>
 
-      <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-50 mt-10 mb-4">4. Limitation of Liability</h2>
+      <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-50 mt-10 mb-4">5. Limitation of Liability</h2>
       <p className="uppercase text-sm leading-relaxed text-zinc-700 dark:text-zinc-350 bg-zinc-100 dark:bg-zinc-900/50 p-4 rounded-xl border border-zinc-200 dark:border-zinc-800">
         TO THE MAXIMUM EXTENT PERMITTED BY LAW, IN NO EVENT SHALL 403 STUDIO OR ITS DEVELOPERS BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, OR CONSEQUENTIAL DAMAGES (INCLUDING BUT NOT LIMITED TO LOSS OF HIGH SCORES, GAME RECORDS, OR OTHER DATA) ARISING FROM THE USE OR INABILITY TO USE THE APPLICATION, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. OUR CUMULATIVE LIABILITY SHALL NOT EXCEED $10.00 CAD.
       </p>
 
-      <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-50 mt-10 mb-4">5. Governing Law & Dispute Resolution</h2>
+      <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-50 mt-10 mb-4">6. Governing Law & Dispute Resolution</h2>
       <p>
         These Terms shall be governed by, and construed in accordance with, the laws of the Province of Alberta, Canada. Any legal actions arising under these terms shall be brought exclusively in the courts located in Calgary, Alberta, Canada.
       </p>
 
-      <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-50 mt-10 mb-4">6. Contact Support</h2>
+      <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-50 mt-10 mb-4">7. Contact Support</h2>
       <p>
         If you have any questions or feedback regarding these terms, please contact:{" "}
         <a href={`mailto:${site.email}`} className="text-blue-500 hover:underline">
