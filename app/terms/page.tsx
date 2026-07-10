@@ -36,9 +36,16 @@ export default function TermsPage() {
         All rights, titles, and interests in and to the Site and Applications—including all source code, graphic designs, mockups, vector artwork, logos, icons, trademarks, and text elements—are and shall remain the exclusive intellectual property of {site.name}. These properties are protected by Canadian and international copyright, trademark, and intellectual property laws.
       </p>
 
-      <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-50 mt-10 mb-4">3. Data Storage & Sync Responsibility</h2>
+      <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-50 mt-10 mb-4">3. Data Storage, Sync & Backup Responsibility</h2>
       <p>
-        Depending on the specific Application, your data may be stored locally (with optional iCloud synchronization) or synced directly to our secure website servers. You are responsible for maintaining device backups or secure account credentials. {site.name} is not responsible for data loss resulting from device failures, application deletions, or credential sharing.
+        All inputs, configurations, game achievements, logs, and duty data created inside our Applications are stored locally in the secure sandboxed storage of your physical device. Depending on the Application:
+      </p>
+      <ul className="list-disc pl-6 space-y-2 text-zinc-650 dark:text-zinc-400">
+        <li><strong>Local & iCloud Sync Apps:</strong> Your data is stored on your device and, if enabled, synced only via your personal Apple iCloud account and Apple services, which we have no access to. You are solely responsible for maintaining secure backups of your device files and configurations.</li>
+        <li><strong>Pilot Logbook App:</strong> Your flight log entries, duty times, and calculations are securely backed up on our Supabase server. This data can be accessed via PC or on your iOS devices using your own secure credentials, which we do not have access to. You are responsible for keeping your credentials confidential.</li>
+      </ul>
+      <p className="mt-4">
+        {site.name} is not responsible for data loss resulting from application deletion, device failures, iCloud sync interruptions, or unauthorized account access due to credential sharing.
       </p>
 
       <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-50 mt-10 mb-4">4. Indemnification</h2>
