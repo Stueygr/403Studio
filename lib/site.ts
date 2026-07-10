@@ -55,7 +55,7 @@ export const apps = [
       "Works offline — perfect for flights & commutes",
       "Daily challenges & XP progression system",
       "99+ achievements & leaderboards to compete with your friends",
-      "Secure iCloud synchronization support",
+      "Secure iCloud synchronization",
       "Clean, beautiful interface designed for iPhone",
     ],
     games: [
