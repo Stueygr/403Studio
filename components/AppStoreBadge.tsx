@@ -21,7 +21,7 @@ export function AppStoreBadge({ href, betaUrl }: Props) {
       {/* Badge Text */}
       <div className="flex flex-col items-start leading-none gap-0.5">
         <span className="text-[8px] font-bold uppercase tracking-widest text-zinc-400">
-          {href ? "Download on the" : isBeta ? "Join the open" : "Coming soon to"}
+          {href ? "Download on the" : isBeta ? "Join the open" : "Coming soon to the"}
         </span>
         <span className="text-xs font-semibold text-white">
           {href ? "App Store" : isBeta ? "TestFlight Beta" : "App Store"}

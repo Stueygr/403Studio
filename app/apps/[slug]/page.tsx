@@ -9,6 +9,7 @@ import { JsonLd } from "@/components/JsonLd";
 
 import { AppStoreBadge } from "@/components/AppStoreBadge";
 import { ScreenshotGallery } from "@/components/ScreenshotGallery";
+import { WaitlistForm } from "@/components/WaitlistForm";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -138,8 +139,16 @@ export default async function AppPage({ params }: Props) {
                   </div>
                   <h1 className="text-4xl md:text-5xl font-bold tracking-tight">{app.name}</h1>
                 </div>
-                <p className="text-xl font-medium text-zinc-650 dark:text-zinc-300 mb-6">{app.tagline}</p>
+                <p className="text-xl font-medium text-zinc-650 dark:text-zinc-300 mb-6">
+                  {app.tagline}
+                  {app.slug === "pilot-logbook" && (
+                    <span className="block text-sm font-semibold text-zinc-500 mt-2">
+                      Built for Canadian commercial pilots.
+                    </span>
+                  )}
+                </p>
                 <p className="text-base text-zinc-600 dark:text-zinc-400 leading-relaxed mb-6">{app.description}</p>
+                
                 {"websiteUrl" in app && app.websiteUrl && "websiteLabel" in app && app.websiteLabel && (
                   <div className="mb-6">
                     <a
@@ -154,6 +163,26 @@ export default async function AppPage({ params }: Props) {
                       Visit {app.websiteLabel}
                       <span aria-hidden="true" className="opacity-70">&rarr;</span>
                     </a>
+                  </div>
+                )}
+
+                {app.slug === "pilot-logbook" && (
+                  <p className="text-xs text-zinc-500 dark:text-zinc-450 mb-8 flex items-center gap-2 font-medium">
+                    <svg className="w-3.5 h-3.5 text-emerald-500 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="3">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.57-.598-3.75h-.152c-3.196 0-6.1-1.249-8.25-3.286zm0 3.036a1.5 1.5 0 011.5 1.5v3a1.5 1.5 0 01-3 0v-3a1.5 1.5 0 011.5-1.5z" />
+                    </svg>
+                    Your logbook, your data — encrypted and backed up to your private account.
+                  </p>
+                )}
+
+                {!app.appStoreUrl && !("betaUrl" in app && app.betaUrl) && (
+                  <div className="mb-10 p-5 md:p-6 rounded-2xl border border-zinc-200/80 dark:border-zinc-800 bg-white dark:bg-zinc-900/40 flex flex-col md:flex-row gap-6 items-start md:items-center justify-between shadow-sm">
+                    <div className="shrink-0">
+                      <AppStoreBadge href={app.appStoreUrl} betaUrl={"betaUrl" in app ? app.betaUrl : null} />
+                    </div>
+                    <div className="flex-grow max-w-md w-full">
+                      <WaitlistForm appSlug={app.slug} />
+                    </div>
                   </div>
                 )}
               </div>
@@ -241,12 +270,9 @@ export default async function AppPage({ params }: Props) {
                     Join Open Beta
                   </a>
                 ) : (
-                  <a
-                    href={`mailto:${site.email}?subject=${encodeURIComponent(`${app.name} — notify me`)}`}
-                    className="whitespace-nowrap px-6 py-2.5 rounded-full bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 text-sm font-medium hover:scale-105 transition-transform shadow-md hover:shadow-lg"
-                  >
-                    Notify me
-                  </a>
+                  <div className="w-full md:w-auto max-w-sm shrink-0">
+                    <WaitlistForm appSlug={app.slug} />
+                  </div>
                 )}
               </div>
             </div>
