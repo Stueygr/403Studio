@@ -41,14 +41,14 @@ export const apps = [
     name: "Game Vault - No Wi-Fi Games",
     tagline: "All the games you know and love — no Wi-Fi needed.",
     description:
-      "Chess, checkers, tic-tac-toe, sudoku, and so many more classic games, all built for offline play. Perfect for long flights, subway commutes, or anywhere you lose signal. Just the timeless games you grew up with.",
+      "Chess, checkers, tic-tac-toe, sudoku, and so many more classic games, all built for offline play. Perfect for long flights, subway commutes, or anywhere you lose signal. The timeless games you grew up with, plus a few originals we think you'll love.",
     color: "purple" as const,
     icon: "/icon_gamevault.png",
     iconDark: null,
     mockup: "/game_vault_mockup.png",
     appStoreUrl: null,
     betaUrl: "https://testflight.apple.com/join/zbA8DNVM",
-    syncDescription: "Exclusively for iPhone. Securely synchronized via your own personal iCloud.",
+    syncDescription: "For iPhone & iPad. Securely synchronized via your own personal iCloud.",
     screenshots: [
       { src: "/gv_vault_smash.jpg", alt: "Vault Smash game showing brick breaker style gameplay" },
     ],
@@ -56,9 +56,9 @@ export const apps = [
       "Chess, checkers, tic-tac-toe, sudoku & more",
       "Works offline — perfect for flights & commutes",
       "Daily challenges & XP progression system",
-      "99+ achievements & leaderboards to compete with your friends",
+      "99 achievements & leaderboards to compete with your friends",
       "Secure iCloud synchronization",
-      "Clean, beautiful interface designed for iPhone",
+      "Clean, beautiful interface for iPhone & iPad",
     ],
     games: [
       "Chess",
