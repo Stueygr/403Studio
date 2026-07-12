@@ -25,7 +25,7 @@ export const apps = [
     syncDescription: "Exclusively for iPhone & iPad. Securely synchronized to PilotLogbook.ca. Your logbook, your data — encrypted and backed up to your private account.",
     features: [
       "Flight & Duty Logging: Track block, air, and duty times on the go",
-      "Flight & Duty Limits: Monitor your times against Canadian 700-series flight & duty limits (CARs 703, 704, and 705), with built-in alerts before you reach them",
+      "Flight and Duty Limits: Monitor your duty periods against the CARs requirements and uses built-in alerts to warn you before you reach them",
       "Export Logs: Export logs to PDF and CSV formats ready for audits",
       "Scan Your Logbook: Digitize your paper logbooks and bring your history into one place",
       "Route Map & Stats: Interactive route mapping with insights into your most-flown routes",
