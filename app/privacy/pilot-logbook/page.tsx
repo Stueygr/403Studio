@@ -14,7 +14,7 @@ export default function PilotLogbookPrivacyPage() {
   return (
     <LegalLayout title="Privacy Policy — Pilot Logbook">
       <p>
-        <strong>Last updated:</strong> June 30, 2026
+        <strong>Last updated:</strong> July 14, 2026
       </p>
       <p>
         Pilot Logbook is built and published by {site.name}. We understand the critical nature of flight deck data and are committed to maintaining the absolute confidentiality of your logs and duty metrics. This policy outlines how your data is handled.
@@ -22,7 +22,7 @@ export default function PilotLogbookPrivacyPage() {
 
       <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-50 mt-10 mb-4">1. Flight Data & Privacy</h2>
       <p>
-        Pilot Logbook allows you to log flight entries, block times, air times, landing counts, night calculations, and duty tracking parameters. Your flight logs are securely backed up on our Supabase server and can be accessed by PC or on your iOS device using your own credentials—which we do not have access to. We will never share, sell, or monetize your flight logs.
+        Pilot Logbook allows you to log flight entries, block times, air times, landing counts, night calculations, duty tracking parameters, and aviation documents. Your flight logs are securely backed up on our Supabase server and can be accessed by PC or on your iOS device using your own credentials—which we do not have access to. We will never share, sell, or monetize your flight logs.
       </p>
 
       <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-50 mt-10 mb-4">2. Cloud Synchronization & Accounts</h2>
@@ -32,7 +32,7 @@ export default function PilotLogbookPrivacyPage() {
 
       <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-50 mt-10 mb-4">3. Device Permissions & SDKs</h2>
       <p>
-        Pilot Logbook does not request or require access to sensitive system permissions such as GPS Location Services, Contacts, Microphone, or Camera. The app does not integrate any third-party behavioral tracking SDKs.
+        Pilot Logbook requests camera access for one purpose only: scanning your paper logbook pages and aviation documents so you can import them without retyping. All scanning is processed entirely on your device—text recognition and AI extraction run locally, and your scanned images are never uploaded to our servers or any third party. Only the entries you review and save become part of your logbook. The app does not request access to GPS Location Services, Contacts, or Microphone, and does not integrate any third-party behavioral tracking SDKs. If you add the home screen widget, your hour totals and next document expiry are stored on your device only.
       </p>
 
       <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-50 mt-10 mb-4">4. GDPR & CCPA Rights</h2>

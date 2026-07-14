@@ -14,7 +14,7 @@ export default function PrivacyPage() {
   return (
     <LegalLayout title="Privacy Policy">
       <p>
-        <strong>Last updated:</strong> July 10, 2026
+        <strong>Last updated:</strong> July 14, 2026
       </p>
       <p>
         403 Studio (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;) operates the website located at <a href={site.url} className="text-blue-500 hover:underline">www.403studio.ca</a> (the &quot;Site&quot;) and develops and publishes mobile applications for Apple platforms (collectively, the &quot;Applications&quot;). 
@@ -45,7 +45,7 @@ export default function PrivacyPage() {
 
       <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-50 mt-10 mb-4">3. Device Permission Disclosures</h2>
       <p>
-        To ensure complete transparency, we disclose that our Applications do not request or utilize sensitive system-level permissions, including but not limited to GPS background location, contacts, address books, microphone, or camera access. 
+        To ensure complete transparency, we disclose that our Applications do not request or utilize sensitive system-level permissions, including but not limited to GPS background location, contacts, address books, or microphone access. The only exception is Pilot Logbook, which requests camera access solely for on-device scanning of paper logbooks and aviation documents, processing everything locally on your device.
       </p>
       <p>
         For our ad-supported games, a request for App Tracking Transparency (ATT) permission may be presented on launch to facilitate personalized ad serving. You are free to deny this permission, in which case only non-personalized ads are displayed.
