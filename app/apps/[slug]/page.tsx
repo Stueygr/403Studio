@@ -175,7 +175,7 @@ export default async function AppPage({ params }: Props) {
                   </p>
                 )}
 
-                {!app.appStoreUrl && !("betaUrl" in app && app.betaUrl) && (
+                {!app.appStoreUrl && !("betaUrl" in app && app.betaUrl) ? (
                   <div className="mb-10 p-5 md:p-6 rounded-2xl border border-zinc-200/80 dark:border-zinc-800 bg-white dark:bg-zinc-900/40 flex flex-col md:flex-row gap-6 items-start md:items-center justify-between shadow-sm">
                     <div className="shrink-0">
                       <AppStoreBadge href={app.appStoreUrl} betaUrl={"betaUrl" in app ? app.betaUrl : null} />
@@ -183,6 +183,10 @@ export default async function AppPage({ params }: Props) {
                     <div className="flex-grow max-w-md w-full">
                       <WaitlistForm appSlug={app.slug} />
                     </div>
+                  </div>
+                ) : (
+                  <div className="mb-10 scale-90 origin-left">
+                    <AppStoreBadge href={app.appStoreUrl} betaUrl={"betaUrl" in app ? app.betaUrl : null} />
                   </div>
                 )}
               </div>
