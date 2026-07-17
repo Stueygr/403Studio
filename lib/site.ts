@@ -56,7 +56,7 @@ export const apps = [
       "Chess, checkers, tic-tac-toe, sudoku & more",
       "Works offline — perfect for flights & commutes",
       "Daily challenges & XP progression system",
-      "99 achievements & leaderboards to compete with your friends",
+      "90+ achievements & leaderboards to compete with your friends",
       "Secure iCloud synchronization",
       "Clean, beautiful interface for iPhone & iPad",
     ],
