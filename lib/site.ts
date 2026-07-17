@@ -19,7 +19,7 @@ export const apps = [
     iconDark: "/icon_pilot_dark.jpg",
     mockup: "/pilot_logbook_ui_v2.png",
     appStoreUrl: null,
-    betaUrl: null,
+    betaUrl: "https://testflight.apple.com/join/dbFtgJg6",
     websiteUrl: "https://pilotlogbook.ca",
     websiteLabel: "PilotLogbook.ca",
     syncDescription: "Exclusively for iPhone & iPad. Securely synchronized to PilotLogbook.ca. Your logbook, your data — encrypted and backed up to your private account.",
