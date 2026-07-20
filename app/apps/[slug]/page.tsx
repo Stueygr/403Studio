@@ -78,8 +78,6 @@ export default async function AppPage({ params }: Props) {
     "operatingSystem": "iOS",
     "applicationCategory": app.slug === "pilot-logbook"
       ? "UtilitiesApplication"
-      : app.slug === "vegas-cyberpunk-midnight"
-      ? "CasinoApplication"
       : "GameApplication",
     "offers": {
       "@type": "Offer",

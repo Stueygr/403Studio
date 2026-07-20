@@ -31,7 +31,7 @@ export default function PrivacyPage() {
         <li><strong>No Account Sign-Ups:</strong> Our Applications do not require registration, login, profile creation, or email address entry to function.</li>
         <li><strong>No Direct Telemetry or Behavioral Tracking:</strong> We do not integrate direct behavioral tracking SDKs or analytics frameworks (such as Google Analytics or Firebase) to monitor how you navigate screens or your usage habits.</li>
         <li><strong>No Crash Analytics Sharing:</strong> Crash reporting is managed exclusively via the native, opt-in Apple diagnostics framework. We do not utilize third-party crash reporting databases.</li>
-        <li><strong>Ad-Supported Exceptions:</strong> While premium utility applications like Pilot Logbook remain entirely free of advertising and third-party tracking, some of our free games (such as Game Vault and Vegas Cyberpunk Midnight) display advertisements served by Google AdMob. AdMob may collect and process device identifiers and usage statistics as detailed in Section 5.</li>
+        <li><strong>Ad-Supported Exceptions:</strong> While premium utility applications like Pilot Logbook remain entirely free of advertising and third-party tracking, some of our free games (such as Game Vault and Neon Siege) display advertisements served by Google AdMob. AdMob may collect and process device identifiers and usage statistics as detailed in Section 5.</li>
       </ul>
 
       <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-50 mt-10 mb-4">2. Sandboxed Local Storage & Cloud Syncing</h2>
@@ -39,7 +39,7 @@ export default function PrivacyPage() {
         All inputs, configurations, game achievements, logs, and duty data created inside our Applications are stored locally in the secure sandboxed storage of your physical device. Depending on the Application:
       </p>
       <ul className="list-disc pl-6 space-y-2 text-zinc-650 dark:text-zinc-400">
-        <li><strong>Local & iCloud Sync Apps:</strong> For our offline games and casino simulators, we run zero server-side databases. Your data is stored on your device and, if enabled, synced only via your personal Apple iCloud account and Apple services, which we have no access to.</li>
+        <li><strong>Local & iCloud Sync Apps:</strong> For our offline games and strategy/tower defense simulators, we run zero server-side databases. Your data is stored on your device and, if enabled, synced only via your personal Apple iCloud account and Apple services, which we have no access to.</li>
         <li><strong>Pilot Logbook App:</strong> Your flight log entries, duty times, and calculations are securely backed up on our Supabase server. This data can be accessed via PC or on your iOS devices using your own secure credentials, which we do not have access to.</li>
       </ul>
 
@@ -58,7 +58,7 @@ export default function PrivacyPage() {
 
       <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-50 mt-10 mb-4">5. Third-Party Advertising & Data Collection (AdMob)</h2>
       <p>
-        To support the ongoing development of our free-to-play games, Game Vault and Vegas Cyberpunk Midnight integrate the Google Mobile Ads (AdMob) SDK. When you play these games, AdMob may collect, process, and share specific device-level identifiers.
+        To support the ongoing development of our free-to-play games, Game Vault and Neon Siege integrate the Google Mobile Ads (AdMob) SDK. When you play these games, AdMob may collect, process, and share specific device-level identifiers.
       </p>
       <ul className="list-disc pl-6 space-y-2 text-zinc-650 dark:text-zinc-400">
         <li><strong>Data Collected:</strong> AdMob collects device identifiers (such as Apple&apos;s IDFA or vendor identifiers), usage statistics, device manufacturer, system version, IP address (for general location), and diagnostic logs.</li>
