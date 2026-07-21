@@ -11,9 +11,9 @@ export const apps = [
   {
     slug: "pilot-logbook",
     name: "Pilot Logbook",
-    tagline: "Engineered for the flight deck.",
+    tagline: "The pilot's logbook built for Canadian pilots. Web and iPhone/iPad. No subscriptions required—unless you want more.",
     description:
-      "A comprehensive flight logger and duty tracker that works entirely offline — built to help Canadian pilots stay on top of their flight and duty time limits under the Canadian Aviation Regulations (CARs).",
+      "Pilot Logbook is the flight logging app Canadian pilots trust. Log flights, track currency, manage your fleet, and export PDFs — all on your device, synced across web and iPhone/iPad. Free to start. Premium features available.\n\nYour logbook. Your flying history. Pilot Logbook gives you a clean, fast way to log every flight — offline on your phone, synced to the web when you connect. Simple logging, powerful insights, and full privacy. All your data stays yours.",
     color: "blue" as const,
     icon: "/icon_pilot.jpg",
     iconDark: "/icon_pilot_dark.jpg",
@@ -22,19 +22,49 @@ export const apps = [
     betaUrl: "https://testflight.apple.com/join/dbFtgJg6",
     websiteUrl: "https://pilotlogbook.ca",
     websiteLabel: "PilotLogbook.ca",
-    syncDescription: "Exclusively for iPhone & iPad. Securely synchronized to PilotLogbook.ca. Your logbook, your data — encrypted and backed up to your private account.",
+    syncDescription: "For Web, iPhone & iPad. Securely synchronized to PilotLogbook.ca. Your logbook, your data — encrypted and backed up to your private account.",
+    ctaText: "Start logging now — web or iPhone/iPad. Free.",
     features: [
-      "Flight & Duty Logging: Track block, air, and duty times on the go",
-      "Flight and Duty Limits: Monitor your duty periods against the CARs requirements and uses built-in alerts to warn you before you reach them",
-      "Export Logs: Export logs to PDF and CSV formats ready for audits",
-      "Scan Your Logbook: Digitize your paper logbooks and bring your history into one place",
-      "Route Map & Stats: Interactive route mapping with insights into your most-flown routes",
-      "Quick Logbook Entry: Fast, easy flight logging on your iPhone or iPad that syncs to your secure web dashboard",
-      "Fleet Manager: Track aircraft details and most common types flown",
-      "Document Expiry Tracker: Receive alerts for license, rating, and medical renewals",
-      "Custom Log Fields: Tailor your entries to track specific flight or training hours",
-      "100% Offline Capable: Log everything in the cockpit with zero cellular dependency — syncs automatically when you're back online",
+      "Flight logging with aircraft type, registration, takeoff/landing day/night, crew roles, and hours",
+      "Currency tracking — see your recency at a glance; build custom currency rules tailored to your operation",
+      "Route map — visualize your flying history, see patterns in where you fly",
+      "Fleet manager — track your aircraft types; registration lookup pre-fills the plane",
+      "Aviation documents — license, medical, endorsements with expiry dates",
+      "CSV import/export — bring in old logbooks or export for backup",
+      "PDF export — clean logbook pages and summaries",
+      "Logbook scanning (iPhone/iPad) — photograph pages, our OCR extracts the data in seconds. The photo is deleted after—we only keep the flight info",
+      "Web + iPhone/iPad — log anywhere, sync everywhere; works offline, picks up where you left off"
     ],
+    faqs: [
+      {
+        q: "Is my data safe?",
+        a: "Yes. Your logbook is private to you. When you use logbook scanning, we process the photo to extract flight data (dates, times, aircraft info), then immediately delete the photo—we never store it. No personal documents, no keeping images. Your flight data syncs securely across your devices."
+      },
+      {
+        q: "What if I lose internet?",
+        a: "The app works completely offline. Log flights, edit, add notes—everything stays on your device. When you reconnect, everything syncs automatically across your devices."
+      },
+      {
+        q: "What's the difference between free and premium?",
+        a: "Free gives you full logging, tracking, and export. Premium unlocks advanced features like cloud AI scanning enhancement and priority support. Start free, upgrade when you need more."
+      },
+      {
+        q: "Can I import my old logbook?",
+        a: "Yes. CSV import handles most formats. If your export has Date, Aircraft Type, Registration, From, To, and hours, we'll read it."
+      },
+      {
+        q: "How does logbook scanning work?",
+        a: "Point your iPhone/iPad camera at a logbook page. Our OCR reads the handwriting or print, extracts the flight info, and fills in the form for you. The photo is deleted immediately—we only save the flight data."
+      },
+      {
+        q: "Can I see my routes on a map?",
+        a: "Yes. The Route Map shows everywhere you've flown, making it easy to spot patterns and relive your flying history."
+      },
+      {
+        q: "What devices does it work on?",
+        a: "iPhone, iPad, and web browsers (Chrome, Safari, Firefox, Edge)."
+      }
+    ]
   },
   {
     slug: "game-vault",

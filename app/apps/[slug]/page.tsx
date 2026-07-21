@@ -173,6 +173,13 @@ export default async function AppPage({ params }: Props) {
                   </p>
                 )}
 
+                {/* Call to action text */}
+                {"ctaText" in app && app.ctaText && (
+                  <p className="text-sm font-semibold text-zinc-650 dark:text-zinc-350 mb-4 leading-relaxed">
+                    {app.ctaText}
+                  </p>
+                )}
+
                 {!app.appStoreUrl && !("betaUrl" in app && app.betaUrl) ? (
                   <div className="mb-10 p-5 md:p-6 rounded-2xl border border-zinc-200/80 dark:border-zinc-800 bg-white dark:bg-zinc-900/40 flex flex-col md:flex-row gap-6 items-start md:items-center justify-between shadow-sm">
                     <div className="shrink-0">
@@ -305,6 +312,37 @@ export default async function AppPage({ params }: Props) {
               </div>
             </div>
           </div>
+
+          {/* FAQs Section */}
+          {"faqs" in app && app.faqs && (
+            <div className="max-w-4xl mx-auto mt-24 border-t border-zinc-200 dark:border-zinc-800/80 pt-16">
+              <h2 className="text-2xl md:text-3xl font-bold tracking-tight text-center mb-12">
+                Frequently Asked Questions
+              </h2>
+              <div className="space-y-4">
+                {app.faqs.map((faq) => (
+                  <details
+                    key={faq.q}
+                    className="group rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 p-6 [&_summary::-webkit-details-marker]:hidden"
+                  >
+                    <summary className="flex items-center justify-between cursor-pointer focus:outline-none">
+                      <h3 className="text-lg font-bold text-zinc-900 dark:text-zinc-50">
+                        {faq.q}
+                      </h3>
+                      <span className="ml-1.5 shrink-0 rounded-full bg-zinc-100 dark:bg-zinc-800 p-1.5 text-zinc-900 dark:text-zinc-50 transition duration-300 group-open:-rotate-180">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                        </svg>
+                      </span>
+                    </summary>
+                    <p className="mt-4 text-sm leading-relaxed text-zinc-650 dark:text-zinc-400">
+                      {faq.a}
+                    </p>
+                  </details>
+                ))}
+              </div>
+            </div>
+          )}
         </div>
       </main>
 
