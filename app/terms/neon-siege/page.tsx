@@ -42,12 +42,12 @@ export default function NeonSiegeTermsPage() {
       <p className="font-semibold text-zinc-900 dark:text-zinc-50 uppercase tracking-wide text-xs">
         THE FOLLOWING SECTION IS IMPORTANT. PLEASE READ IT CAREFULLY.
       </p>
-      <p className="uppercase text-sm leading-relaxed text-zinc-700 dark:text-zinc-350 bg-zinc-100 dark:bg-zinc-900/50 p-4 rounded-xl border border-zinc-200 dark:border-zinc-800">
+      <p className="uppercase text-sm leading-relaxed">
         NEON SIEGE IS PROVIDED &quot;AS IS&quot; AND &quot;AS AVAILABLE,&quot; WITHOUT WARRANTY OF ANY KIND. TO THE MAXIMUM EXTENT PERMITTED BY LAW, 403 STUDIO DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT. WE DO NOT WARRANT THAT THE APP WILL BE FREE FROM BUGS, ERRORS, OR SYSTEM INTERRUPTIONS.
       </p>
 
       <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-50 mt-10 mb-4">5. Limitation of Liability</h2>
-      <p className="uppercase text-sm leading-relaxed text-zinc-700 dark:text-zinc-350 bg-zinc-100 dark:bg-zinc-900/50 p-4 rounded-xl border border-zinc-200 dark:border-zinc-800">
+      <p className="uppercase text-sm leading-relaxed">
         TO THE MAXIMUM EXTENT PERMITTED BY LAW, IN NO EVENT SHALL 403 STUDIO OR ITS DEVELOPERS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, OR CONSEQUENTIAL DAMAGES (INCLUDING BUT NOT LIMITED TO LOSS OF GAME RECORDS, UPGRADES, OR PROGRESS) ARISING FROM THE USE OR INABILITY TO USE THE APPLICATION, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. OUR CUMULATIVE LIABILITY SHALL NOT EXCEED $10.00 CAD.
       </p>
 
