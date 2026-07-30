@@ -14,7 +14,7 @@ export default function NeonSiegePrivacyPage() {
   return (
     <LegalLayout title="Privacy Policy — Neon Siege">
       <p>
-        <strong>Last updated:</strong> July 28, 2026
+        <strong>Last updated:</strong> July 30, 2026
       </p>
       <p>
         Neon Siege is built and published by {site.name}. We believe your
@@ -22,17 +22,7 @@ export default function NeonSiegePrivacyPage() {
       </p>
 
       <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-50 mt-10 mb-4">
-        1. Data Collection
-      </h2>
-      <p>
-        <strong>Neon Siege does not collect any data.</strong> We do not collect,
-        store, share, or sell any personal information, gameplay statistics, device
-        identifiers, or usage data. No data is ever transmitted from your device
-        to our servers or any third party.
-      </p>
-
-      <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-50 mt-10 mb-4">
-        2. Local Storage
+        1. Local Storage
       </h2>
       <p>
         Neon Siege operates entirely locally on your iPhone. Your strategy
@@ -42,7 +32,7 @@ export default function NeonSiegePrivacyPage() {
       </p>
 
       <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-50 mt-10 mb-4">
-        3. Apple iCloud Syncing
+        2. Apple iCloud Syncing
       </h2>
       <p>
         If you enable cross-device progress syncing, your high scores and upgrade
@@ -52,16 +42,44 @@ export default function NeonSiegePrivacyPage() {
       </p>
 
       <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-50 mt-10 mb-4">
-        4. Device Permissions
+        3. Device Permissions &amp; Advertising SDKs
       </h2>
       <p>
         Neon Siege does not request or require access to sensitive system
         permissions such as GPS Location Services, Contacts, Microphone, or
-        Camera. No third-party analytics or advertising SDKs are integrated.
+        Camera.
+      </p>
+      <p>
+        To support the free version of the App, we integrate the Google Mobile
+        Ads (AdMob) SDK.
+      </p>
+      <p>
+        AdMob collects device identifiers (such as Apple&apos;s IDFA or vendor
+        identifiers), usage statistics, system version, and general location
+        (derived from IP address) to serve advertisements, limit frequency of
+        ads, combat fraud, and attribute installs.
+      </p>
+      <p>
+        Upon launching the App, you may be presented with an App Tracking
+        Transparency (ATT) prompt asking for permission to track your activity.
+      </p>
+      <p>
+        If you grant tracking permission, AdMob may show you personalized ads
+        based on your activity across apps and websites, as permitted by your
+        device settings.
+      </p>
+      <p>
+        If you decline or have not been asked, AdMob still serves
+        non-personalized ads, which use only contextual information and do not
+        rely on your advertising identifier for targeting.
+      </p>
+      <p>
+        Consent for third-party ad serving can be managed at any time via your
+        iOS Settings under <em>Privacy &amp; Security &gt; Tracking</em>.
       </p>
 
       <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-50 mt-10 mb-4">
-        5. Contact Information
+        4. Contact Information
       </h2>
       <p>
         For inquiries regarding our privacy standards, contact us at:{" "}
