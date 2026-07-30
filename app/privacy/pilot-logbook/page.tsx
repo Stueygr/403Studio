@@ -14,7 +14,7 @@ export default function PilotLogbookPrivacyPage() {
   return (
     <LegalLayout title="Privacy Policy — Pilot Logbook">
       <p>
-        <strong>Last updated:</strong> July 14, 2026
+        <strong>Last updated:</strong> July 29, 2026
       </p>
       <p>
         Pilot Logbook is built and published by {site.name}. We understand the critical nature of flight deck data and are committed to maintaining the absolute confidentiality of your logs and duty metrics. This policy outlines how your data is handled.
@@ -32,7 +32,13 @@ export default function PilotLogbookPrivacyPage() {
 
       <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-50 mt-10 mb-4">3. Device Permissions & SDKs</h2>
       <p>
-        Pilot Logbook requests camera access for one purpose only: scanning your paper logbook pages and aviation documents so you can import them without retyping. Scanning is processed entirely on your device—text recognition and AI extraction run locally, and your scanned images themselves are never uploaded to our servers or any third party. The entries you review and save from a scan become part of your logbook and are synced and backed up like any entry you type in (see Section 2). The app does not request access to GPS Location Services, Contacts, or Microphone, and does not integrate any third-party behavioral tracking SDKs. If you add the home screen widget, the widget&apos;s copy of your hour totals and next document expiry is stored on your device and never uploaded; your logbook itself remains backed up to your account.
+        Pilot Logbook requests camera access for one purpose only: scanning your paper logbook pages and aviation documents so you can import them without retyping. Camera scanning is processed entirely on your device &mdash; text recognition and AI extraction run locally, and camera captures are never uploaded to our servers or any third party. Only the entries you review and save from a scan become part of your logbook, synced and backed up like any entry you type in (see Section 2).
+      </p>
+      <p>
+        <strong>Optional cloud AI extraction.</strong> When you choose to upload a photo or PDF and enable AI-enhanced extraction on iOS, or when scanning from our website (which has no on-device scanner), that file is transmitted over an encrypted connection to our processing service, which uses Anthropic&apos;s Claude API solely to extract the logbook or document fields. Anthropic does not use this data to train its models, automatically deletes it from its systems within 30 days, and retains it longer only if required by law or flagged by its automated safety systems (up to 2 years). We do not store the file ourselves after processing. This is opt-in on the app: if you never enable it, your images never leave your device.
+      </p>
+      <p>
+        The app does not request access to GPS Location Services, Contacts, or Microphone, and does not integrate any third-party behavioral tracking SDKs. If you add the home screen widget, the widget&apos;s copy of your hour totals and next document expiry is stored on your device and never uploaded; your logbook itself remains backed up to your account.
       </p>
 
       <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-50 mt-10 mb-4">4. GDPR & CCPA Rights</h2>

@@ -14,7 +14,7 @@ export default function PilotLogbookTermsPage() {
   return (
     <LegalLayout title="Terms of Service — Pilot Logbook">
       <p>
-        <strong>Last updated:</strong> June 30, 2026
+        <strong>Last updated:</strong> July 29, 2026
       </p>
       <p>
         These Terms of Service govern your use of the Pilot Logbook application (the &quot;App&quot;). By installing or using Pilot Logbook, you agree to these Terms. If you do not agree, please do not use the App.
@@ -33,12 +33,23 @@ export default function PilotLogbookTermsPage() {
         You are solely responsible for manually verifying the correctness of all flight parameters, block hours, night calculations, and rest compliance limits against official Canadian Aviation Regulations (CARs) or relevant local guidelines. {site.name} is not liable for duty exceedances, licensing issues, or administrative enforcement resulting from the use of this app.
       </p>
 
-      <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-50 mt-10 mb-4">3. Cloud Synchronization & Data Security</h2>
+      <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-50 mt-10 mb-4">3. Subscriptions & Billing</h2>
+      <p>
+        Pilot Logbook offers optional paid subscription tiers (&quot;Premium&quot;) that unlock additional features, billed through Stripe. By purchasing a subscription, you authorize {site.name} to charge your payment method on a recurring basis until you cancel.
+      </p>
+      <p>
+        You may cancel your subscription at any time through the app or your account portal. Cancellation stops future billing, but all sales are final &mdash; we do not offer refunds for partial billing periods or unused time. Your Premium access continues until the end of the period you already paid for.
+      </p>
+      <p>
+        We reserve the right to change subscription pricing or features with reasonable notice; continued use after a price change constitutes acceptance of the new terms.
+      </p>
+
+      <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-50 mt-10 mb-4">4. Cloud Synchronization & Data Security</h2>
       <p>
         Pilot Logbook synchronizes your flight logs to our Supabase database. While we implement secure storage practices, you can access your data via PC or iOS using your own credentials (which we do not have access to). You are responsible for maintaining your account credentials securely. {site.name} is not responsible for data loss resulting from unauthorized account access or credential sharing.
       </p>
 
-      <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-50 mt-10 mb-4">4. Disclaimer of Warranties</h2>
+      <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-50 mt-10 mb-4">5. Disclaimer of Warranties</h2>
       <p className="font-semibold text-zinc-900 dark:text-zinc-50 uppercase tracking-wide text-xs">
         THE FOLLOWING SECTION IS IMPORTANT. PLEASE READ IT CAREFULLY.
       </p>
@@ -46,17 +57,17 @@ export default function PilotLogbookTermsPage() {
         PILOT LOGBOOK IS PROVIDED &quot;AS IS&quot; AND &quot;AS AVAILABLE,&quot; WITHOUT WARRANTY OF ANY KIND. TO THE MAXIMUM EXTENT PERMITTED BY LAW, 403 STUDIO DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT. WE DO NOT WARRANT THAT THE APP WILL BE FREE FROM BUGS, ERRORS, OR SYSTEM INTERRUPTIONS.
       </p>
 
-      <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-50 mt-10 mb-4">5. Limitation of Liability</h2>
+      <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-50 mt-10 mb-4">6. Limitation of Liability</h2>
       <p className="uppercase text-sm leading-relaxed">
         TO THE MAXIMUM EXTENT PERMITTED BY LAW, IN NO EVENT SHALL 403 STUDIO OR ITS DEVELOPERS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, OR CONSEQUENTIAL DAMAGES (INCLUDING BUT NOT LIMITED TO LOSS OF FLIGHT LOGS, FLIGHT RECORDS, OR DUTY HISTORY) ARISING FROM THE USE OR INABILITY TO USE THE APPLICATION, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. OUR CUMULATIVE LIABILITY SHALL NOT EXCEED $10.00 CAD.
       </p>
 
-      <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-50 mt-10 mb-4">6. Governing Law & Dispute Resolution</h2>
+      <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-50 mt-10 mb-4">7. Governing Law & Dispute Resolution</h2>
       <p>
         These Terms shall be governed by, and construed in accordance with, the laws of the Province of Alberta, Canada. Any legal actions arising under these terms shall be brought exclusively in the courts located in Calgary, Alberta, Canada.
       </p>
 
-      <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-50 mt-10 mb-4">7. Contact Support</h2>
+      <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-50 mt-10 mb-4">8. Contact Support</h2>
       <p>
         If you have any questions or feedback regarding these Terms, please contact support at:{" "}
         <a href={`mailto:${site.email}`} className="text-blue-500 hover:underline">
