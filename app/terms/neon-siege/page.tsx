@@ -38,7 +38,7 @@ export default function NeonSiegeTermsPage() {
         Neon Siege stores gameplay progress, stats, and tower parameters locally in sandboxed memory. We cannot recover lost virtual progress, level achievements, or stats resulting from App deletes or hardware issues. You are responsible for keeping local device backups or syncing via Apple iCloud.
       </p>
 
-      <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-550 mt-10 mb-4">4. Disclaimer of Warranties</h2>
+      <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-50 mt-10 mb-4">4. Disclaimer of Warranties</h2>
       <p className="font-semibold text-zinc-900 dark:text-zinc-50 uppercase tracking-wide text-xs">
         THE FOLLOWING SECTION IS IMPORTANT. PLEASE READ IT CAREFULLY.
       </p>

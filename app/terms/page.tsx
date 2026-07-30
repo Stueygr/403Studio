@@ -50,7 +50,7 @@ export default function TermsPage() {
 
       <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-50 mt-10 mb-4">4. Third-Party Advertisements</h2>
       <p>
-        Some of our Applications (specifically free-to-play games like Game Vault and Neon Siege) are supported by advertisements served by third-party ad networks (specifically Google AdMob). 
+        Some of our Applications (specifically free-to-play games like Game Vault) are supported by advertisements served by third-party ad networks (specifically Google AdMob). Other applications, including Neon Siege, do not currently display ads; a future update may add optional rewarded ads, and this policy will be updated before that happens.
       </p>
       <p>
         We do not control, endorse, or assume any responsibility for the content, privacy policies, products, or services advertised. Any interactions or transactions you have with third-party advertisers are solely between you and the advertiser.
