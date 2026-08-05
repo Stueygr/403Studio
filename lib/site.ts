@@ -76,7 +76,7 @@ export const apps = [
     icon: "/icon_gamevault.png",
     iconDark: null,
     mockup: "/game_vault_mockup.png",
-    appStoreUrl: null as string | null,
+    appStoreUrl: "https://apps.apple.com/ca/app/gamevault-no-wifi-games/id6788496972" as string | null,
     betaUrl: "https://testflight.apple.com/join/zbA8DNVM" as string | null,
     syncDescription: "For iPhone & iPad. Securely synchronized via your own personal iCloud.",
     screenshots: [
